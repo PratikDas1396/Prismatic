@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "e-learning": {
+        "prismatic": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/e-learning",
+                        "outputPath": "dist/prismatic",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -27,9 +27,18 @@
                             "node_modules/primeicons/primeicons.css",
                             "node_modules/primeng/resources/themes/md-light-indigo/theme.css",
                             "node_modules/primeng/resources/primeng.min.css",
+                            "src/assets/css/bootstrap.min.css",
+                            "src/assets/css/slick-theme.css",
+                            "src/assets/css/slick.css",
                             "src/assets/css/styles.css"
                         ],
-                        "scripts": ["src/assets/js/custom.js"]
+                        "scripts": [
+                            "src/assets/js/jquery.min.js",
+                            "src/assets/js/popper.min.js",
+                            "src/assets/js/bootstrap.min.js",
+                            "src/assets/js/slick.min.js",
+                            "src/assets/js/custom.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -62,18 +71,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "e-learning:build"
+                        "browserTarget": "prismatic:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "e-learning:build:production"
+                            "browserTarget": "prismatic:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "e-learning:build"
+                        "browserTarget": "prismatic:build"
                     }
                 },
                 "test": {
@@ -110,18 +119,18 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "e-learning:serve"
+                        "devServerTarget": "prismatic:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "e-learning:serve:production"
+                            "devServerTarget": "prismatic:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "e-learning",
+    "defaultProject": "prismatic",
     "cli": {
         "analytics": false
     }
