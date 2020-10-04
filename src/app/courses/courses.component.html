@@ -1,0 +1,41 @@
+<div class="py-3">
+    <div class="container-fluid">
+        <div class="text-center py-3">
+            <h1>Courses</h1>
+        </div>
+        <div class="card-deck py-3">
+            <div class="card shadow-sm course" *ngFor="let course of CourseList">
+                <img src="{{course.ImageUrl}}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{course.Title}}</h5>
+                    <h5 class="card-subtitle">{{course.Subtitle}}</h5>
+                    <p class="card-text">
+                        {{ course.info }}
+                    </p>
+                    <div>
+                        <button class="btn btn-outline-primary float-left">Apply</button>
+                        <button class="btn btn-link float-right">Learn >></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <h1>Categories</h1>
+        </div>
+        <div class="py-3">
+            <div class="row d-flex justify-content-center">
+                <div class="card col-3 m-3 category" *ngFor="let course of Categories">
+                    <div class="card-body text-center ">
+                        <h4 class="p-3"> {{ course }}</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-primary float-left">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
