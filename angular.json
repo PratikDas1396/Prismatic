@@ -21,7 +21,11 @@
                         "aot": false,
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/assets/images",
+                            "src/assets/fonts",
+                            "src/assets/css",
+                            "src/assets/js"
                         ],
                         "styles": [
                             "node_modules/primeicons/primeicons.css",

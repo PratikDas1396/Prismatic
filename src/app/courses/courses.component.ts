@@ -20,7 +20,7 @@ export class CoursesComponent implements OnInit {
     for (let index = 1; index <= 4; index++) {
       let courseObj: Courses = {
         "Id": index,
-        "ImageUrl": '../../assets/images/course.jpg',
+        "ImageUrl": 'assets/images/course.jpg',
         "Title": 'Sample Course : ' + index,
         "Subtitle": 'Sample Course Subtitle  : ' + index,
         "info": 'this is the information about the course : information ' + index,
