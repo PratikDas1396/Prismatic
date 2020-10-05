@@ -8,10 +8,42 @@ import { Component, OnInit } from '@angular/core';
 export class CoursesComponent implements OnInit {
 
   CourseList: Courses[] = [];
-  Categories: string[] = [
-    "Data Science", "Software Engineering", "Cloud Computing", "Machine Learning", "Deep Learning"
+
+  programs :string[] = [
+    "Data Science", "Software Engineering" , "Cloud Computing",  "Machine Learning", "Artificial Intelligence"
+  ] 
+
+  Categories: Category[] = [
+    {
+      "ImageUrl" :"assets/images/ds.svg",
+      "info" : [""],
+      "name" : "Data Science"
+    },
+    {
+      "ImageUrl" :"assets/images/sd.svg",
+      "info" : ["", ""],
+      "name" : "Software Engineering"
+    },
+    {
+      "ImageUrl" :"assets/images/cc.svg",
+      "info" : ["", ""],
+      "name" : "Cloud Computing"
+    },
+    {
+      "ImageUrl" :"assets/images/ml.svg",
+      "info" : ["", ""],
+      "name" : "Machine Learning"
+    },
+    {
+      "ImageUrl" :"assets/images/ai.svg",
+      "info" : ["", ""],
+      "name" : "Artificial Intelligence"
+    },    
   ];
 
+
+
+  // , "", "", "", "Deep Learning"
   CoursesDetail: CoursesDetails[] = [];
 
   responsiveOptions;
@@ -23,9 +55,9 @@ export class CoursesComponent implements OnInit {
       let courseObj: Courses = {
         "Id": index,
         "ImageUrl": 'assets/images/course.jpg',
-        "Title": 'Sample Course : ' + index,
-        "Subtitle": 'Sample Course Subtitle  : ' + index,
-        "info": 'this is the information about the course : information ' + index,
+        "Title": `PG Program in ${ this.programs[index] }`,
+        "Subtitle": '12 Months | Online | Weekend',
+        "info": `Ranked #${index} ${ this.programs[index] } Program in India for future oriented professionals`,
       }
       this.CourseList.push(courseObj);
     }
@@ -39,9 +71,9 @@ export class CoursesComponent implements OnInit {
       let coursesdetailObj: CoursesDetails = {
         "Id": index,
         "ImageUrl": 'assets/images/course.jpg',
-        "Title": 'Sample Course : ' + index,
+        "Title": `PG Program in ${ this.programs[index] }`,
         "Subtitle": 'Sample Course Subtitle  : ' + index,
-        "info": s,
+        "info" : ["Advance Statistics", "Data Mining", "Predictive Modeling", "Time Series Forecasting", "Optimization Techniques"],
       }
 
       this.CoursesDetail.push(coursesdetailObj);
@@ -84,4 +116,10 @@ class CoursesDetails {
   Title: string;
   Subtitle: string
   info: string[]
+}
+
+class Category { 
+  name :string;
+  info :string[];
+  ImageUrl : string;
 }
