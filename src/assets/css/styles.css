@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .dropdown-toggle {
     white-space: nowrap
 }
@@ -961,6 +965,11 @@
     border-color: #007bff;
 }
 
+.btn-custom.btn-outline-success {
+    /* color: #28a745; */
+    border-color: #28a745;
+}
+
 .btn-outline-custom-primary {
     color: #007bff;
     border-color: #007bff;
@@ -1097,4 +1106,8 @@ a:hover,
 .category:hover,
 .course:hover {
     box-shadow: 0 3px 10px 3px rgba(0, 0, 0, .23), 0 3px 10px 3px rgba(0, 0, 0, .16)
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
 }

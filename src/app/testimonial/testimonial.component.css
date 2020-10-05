@@ -73,3 +73,7 @@ h4 {
 .slick-slide {
     margin: 10px
 }
+
+.items .card-body {
+    min-height: 140px;
+}

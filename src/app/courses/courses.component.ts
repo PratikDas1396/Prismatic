@@ -10,13 +10,15 @@ export class CoursesComponent implements OnInit {
   CourseList: Courses[] = [];
   Categories: string[] = [
     "Data Science", "Software Engineering", "Cloud Computing", "Machine Learning", "Deep Learning"
-    
   ];
+
+  CoursesDetail: CoursesDetails[] = [];
 
   responsiveOptions;
 
   constructor() {
-    var courses: Courses[] = [];
+    // var courses: Courses[] = [];
+    // var coursesdetails: CoursesDetails[] = [];
     for (let index = 1; index <= 4; index++) {
       let courseObj: Courses = {
         "Id": index,
@@ -25,10 +27,26 @@ export class CoursesComponent implements OnInit {
         "Subtitle": 'Sample Course Subtitle  : ' + index,
         "info": 'this is the information about the course : information ' + index,
       }
-      courses.push(courseObj);
+      this.CourseList.push(courseObj);
     }
 
-    this.CourseList = courses;
+    for (let index = 1; index <= 4; index++) {
+      let s :string [] = []
+      for (let j = 1; j <  5; j++) {
+        s.push(" Lorem Ipsum data fearuens of Progream " + j)
+      }
+
+      let coursesdetailObj: CoursesDetails = {
+        "Id": index,
+        "ImageUrl": 'assets/images/course.jpg',
+        "Title": 'Sample Course : ' + index,
+        "Subtitle": 'Sample Course Subtitle  : ' + index,
+        "info": s,
+      }
+
+      this.CoursesDetail.push(coursesdetailObj);
+    }
+
     this.responsiveOptions = [
       {
         breakpoint: '1024px',
@@ -58,4 +76,12 @@ class Courses {
   Title: string;
   Subtitle: string
   info: string
+}
+
+class CoursesDetails {
+  Id: number
+  ImageUrl: string;
+  Title: string;
+  Subtitle: string
+  info: string[]
 }
