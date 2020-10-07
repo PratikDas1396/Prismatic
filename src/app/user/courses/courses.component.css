@@ -1,0 +1,55 @@
+.search-bar {
+    position: relative;
+    border-top: 1px solid #dcdacb;
+    background: #fbfbf8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 4px 7px 5px 0px rgba(0, 0, 0, .08);
+    z-index: 1009;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+}
+
+.search-bar input,
+.search-bar button {
+    border-radius: 25px;
+}
+
+.search-bar input:focus,
+.search-bar button:focus {
+    box-shadow: none !important;
+}
+
+.udlite-heading-xl {
+    font-family: 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+    font-size: 1.8rem;
+}
+
+.filter-item-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 0;
+    color: #3c3b37!important;
+    text-align: left;
+    white-space: normal;
+    border-bottom: 1px solid #dcdacb;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+.filter-item-text {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.filter-item-icon {
+    font-size: 18px;
+    margin: auto 0;
+}
