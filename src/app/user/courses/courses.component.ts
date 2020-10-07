@@ -14,3 +14,9 @@ export class CoursesComponent implements OnInit {
     
   }
 }
+
+
+class CoursePool { 
+  name: string;
+
+}
