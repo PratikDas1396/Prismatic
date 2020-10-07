@@ -9,8 +9,10 @@ const appRoutes: Routes = [
     component: UserDashboardComponent,
     children: [
       { path: '', component: HomeTemplateComponent },
+      { path: 'home', redirectTo :'/' },
       { path: 'courses', component: CoursesComponent },
-    ]
+      { path: '**', redirectTo: '/' }
+    ],
   },
   {
     path: 'administrator',

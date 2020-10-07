@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class TestimonialComponent implements OnInit {
 
   tList: TestimonialData[] = [
-    {
-      "info": "Store Owner",
-      "name": "Delbert Simonas",
-      "testimony": "Online reviews can make or break a customer's decision to make a purchase. Read about these customer review sites where your customers'"
-    },
+    // {
+    //   "info": "Store Owner",
+    //   "name": "Delbert Simonas",
+    //   "testimony": "Online reviews can make or break a customer's decision to make a purchase. Read about these customer review sites where your customers'"
+    // },
 
-    {
-      "info": "Store Owner",
-      "name": "Delbert Simonas",
-      "testimony": "When you think of Apple you automatically think expensive if your anything like me. When purchasing this laptop I was skeptical on laptops i purchased."
-    },
+    // {
+    //   "info": "Store Owner",
+    //   "name": "Delbert Simonas",
+    //   "testimony": "When you think of Apple you automatically think expensive if your anything like me. When purchasing this laptop I was skeptical on laptops i purchased."
+    // },
 
     {
       "info": "Store Owner",
