@@ -1,0 +1,15 @@
+.course-intro {
+    width: 45%;
+    /* height: 100%; */
+    position: absolute;
+    font-weight: bold;
+    top: 15%;
+    left: 5%;
+}
+
+.badge {
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5px;
+    line-height: 1.5;
+}

@@ -22,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MenuListItemComponent } from './system/component/menu-list-item/menu-list-item.component';
+import { CourseDetailsComponent } from './user/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MenuListItemComponent } from './system/component/menu-list-item/menu-li
     SystemSidenavComponent,
     UserDashboardComponent,
     MenuListItemComponent,
-    UserBodyComponent
+    UserBodyComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,

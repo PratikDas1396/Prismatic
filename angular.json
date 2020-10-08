@@ -25,7 +25,8 @@
                             "src/assets/images",
                             "src/assets/fonts",
                             "src/assets/css",
-                            "src/assets/js"
+                            "src/assets/js",
+                            "src/assets/pages"
                         ],
                         "styles": [
                             "src/assets/css/bootstrap.min.css",
@@ -39,7 +40,8 @@
                             "src/assets/js/popper.min.js",
                             "src/assets/js/bootstrap.min.js",
                             "src/assets/js/slick.min.js",
-                            "src/assets/js/custom.js"
+                            "src/assets/js/custom.js",
+                            "src/assets/js/jquery-functions.js"
                         ]
                     },
                     "configurations": {
