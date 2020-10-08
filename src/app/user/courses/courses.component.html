@@ -1,14 +1,7 @@
-<div id="search-panel">
+<div id="search-panel " class="d-none">
     <div class="search-bar p-5">
         <div class="container-fluid">
             <div class="row">
-                <!-- <div class="container">
-                    <div class="row ">
-                        
-                        
-                        
-                    </div>
-                </div> -->
                 <div class="col-sm-12 col-md-2"></div>
                 <div class="col-sm-12 col-md-6">
                     <input type="text" placeholder="search" class="form-control">
@@ -21,93 +14,97 @@
     </div>
 </div>
 <div class="">
-    <div id="search_keywords" class="p-15">
-        <div class="container p-0">
+    <div id="search_keywords" class="p-15 d-none">
+        <div class="container p-md-0 p-sm-12">
             <h1 class="font-weight-normal"> Search Keywords </h1>
         </div>
     </div>
-    <hr />
+    <!-- <hr /> -->
     <div class="container border-bottom my-15">
-        <div class="row">
+        <div class="row py-5 justify-content-sm-center justify-content-md-start">
             <h5 class="udlite-heading-xl">All Courses</h5>
         </div>
     </div>
-
-    <div class="container-xl mt-10 p-0">
+    <!-- <div class="container-xl mt-10 p-md-0 p-sm-10">
         <div class="row m-0">
             <div class="col-sm-3 border">
                 <div class="filter">
                     <div class=" filter-item-content">
                         <span class="filter-item-text"> Category </span>
-                        <i class="fa fa-plus-circle filter-item-icon" aria-hidden="true"></i>
+                        <i class="fa fa-plus filter-item-icon" aria-hidden="true"></i>
                     </div>
                     <div class="filter-item-content">
                         <span class="filter-item-text"> Level </span>
-                        <i class="fa fa-plus-circle filter-item-icon" aria-hidden="true"></i>
+                        <i class="fa fa-plus filter-item-icon" aria-hidden="true"></i>
                     </div>
 
                     <div class="filter-item-content">
                         <span class="filter-item-text"> Duration </span>
-                        <i class="fa fa-plus-circle filter-item-icon" aria-hidden="true"></i>
+                        <i class="fa fa-plus filter-item-icon" aria-hidden="true"></i>
                     </div>
                     <div class="filter-item-content">
                         <span class="filter-item-text"> Popularity </span>
-                        <i class="fa fa-plus-circle filter-item-icon" aria-hidden="true"></i>
+                        <i class="fa fa-plus filter-item-icon" aria-hidden="true"></i>
                     </div>
 
                 </div>
             </div>
             <div class="col-sm-9 pr-0">
                 <div class="container-fluid p-0">
-                    <div class="row m-0">
-                        <div class="col-sm-4 mb-5">
-                            <div class="card">
+                    <div class="row m-0 ">
+                        <div class="col-sm-4" *ngFor="let course of courses">
+                            <div class="card mb-5">
                                 <img src="assets/images/course.jpg" class="card-img-top" alt="course">
                                 <div class="card-body">
-                                    <h2 class="card-title">Learn python from scratch</h2>
-                                    <h4 class="card-subtitle mb-2 text-muted text-small">3 Weeks | 20 lectures | Beginner
-                                    </h4>
+                                    <h4 class="card-title"> {{ course.Name }}</h4>
+                                    <p class="card-subtitle mb-2 text-muted">
+                                        {{ course.Features.join(' | ') }}
+                                    </p>
                                     <button class="btn-custom btn-outline-primary btn-block">Apply</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 mb-5">
-                            <div class="card">
-                                <img src="assets/images/course.jpg" class="card-img-top" alt="course">
-                                <div class="card-body">
-                                    <h2 class="card-title">Learn python from scratch</h2>
-                                    <h4 class="card-subtitle mb-2 text-muted">3 Weeks | Python Beginner</h4>
-                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                    <button class="btn-custom btn-outline-primary btn-block">Apply</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-5">
-                            <div class="card">
-                                <img src="assets/images/course.jpg" class="card-img-top" alt="course">
-                                <div class="card-body">
-                                    <h2 class="card-title">Learn python from scratch</h2>
-                                    <h4 class="card-subtitle mb-2 text-muted">3 Weeks | Python Beginner</h4>
-                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                    <button class="btn-custom btn-outline-primary btn-block">Apply</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-5">
-                            <div class="card">
-                                <img src="assets/images/course.jpg" class="card-img-top" alt="course">
-                                <div class="card-body">
-                                    <h2 class="card-title">Learn python from scratch</h2>
-                                    <h4 class="card-subtitle mb-2 text-muted">3 Weeks | Python Beginner</h4>
-                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                    <button class="btn-custom btn-outline-primary btn-block">Apply</button>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
 
+        </div>
+    </div> -->
+    <div class="container-xl mt-10 p-md-0 p-sm-10">
+        <div class="row m-0">
+            <div class="col-sm-4" *ngFor="let course of courses">
+                <div class="card mb-5">
+                    <img src="assets/images/course.jpg" class="card-img-top" alt="course">
+                    <div class="card-body">
+                        <h4 class="card-title"> {{ course.Name }}</h4>
+                        <p class="card-subtitle mb-2 text-muted">
+                            {{ course.Features.join(' | ') }}
+                        </p>
+                        <button class="btn-custom btn-outline-primary btn-block" [routerLink]="['/courseinfo']" routerLinkActive="router-link-active">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-15 justify-content-lg-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>

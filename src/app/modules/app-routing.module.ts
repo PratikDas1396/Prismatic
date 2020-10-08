@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SystemDashboardComponent } from '../system/system-index';
-import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent } from '../user/user-index';
+import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
   {
@@ -11,7 +11,7 @@ const appRoutes: Routes = [
       { path: '', component: HomeTemplateComponent },
       { path: 'home', redirectTo :'/' },
       { path: 'courses', component: CoursesComponent },
-      { path: '**', redirectTo: '/' }
+      { path: 'courseinfo', component: CourseDetailsComponent }
     ],
   },
   {
