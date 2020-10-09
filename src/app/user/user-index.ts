@@ -6,7 +6,6 @@ import { TestimonialComponent } from './testimonial/testimonial.component'
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component'
 import { UserBodyComponent } from './user-body/user-body.component'
 import { CourseDetailsComponent } from './course-details/course-details.component'
-
 export {
     CarouselTemplateComponent,
     CoursesComponent,

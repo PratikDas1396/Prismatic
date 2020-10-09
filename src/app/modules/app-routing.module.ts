@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SystemDashboardComponent } from '../system/system-index';
+import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent } from '../system/system-index';
 import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     component: UserDashboardComponent,
     children: [
       { path: '', component: HomeTemplateComponent },
-      { path: 'home', redirectTo :'/' },
+      { path: 'home', redirectTo: '/' },
       { path: 'courses', component: CoursesComponent },
       { path: 'courseinfo', component: CourseDetailsComponent }
     ],
@@ -17,13 +17,21 @@ const appRoutes: Routes = [
   {
     path: 'administrator',
     component: SystemDashboardComponent,
+    children: [
+      {
+        path: 'setup', children: [
+          { path: 'carousel', component: CarouselMasterComponent },
+          { path: 'testimony', component: TestimonyMasterComponent }
+        ]
+      },
+    ]
   },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutes, { enableTracing: true })],
   exports: [RouterModule]
 })
 
