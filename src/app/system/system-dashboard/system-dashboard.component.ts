@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var AdminDashboardPageLoad: any
+declare var MenuSetup: any
 @Component({
   selector: 'app-system-dashboard',
   templateUrl: './system-dashboard.component.html',
@@ -10,6 +11,9 @@ export class SystemDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    MenuSetup();
+    AdminDashboardPageLoad();
+    
   }
 
 }
