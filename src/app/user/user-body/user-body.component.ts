@@ -13,6 +13,154 @@ export class UserBodyComponent implements OnInit {
     "Data Science", "Cloud Computing", "Machine Learning"
   ]
 
+  HigherEducation: Courses[] = [
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/ml.jpg",
+      "Subtitle": "",
+      "Title": "PGP: AI ML",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/ds.jpg",
+      "Subtitle": "",
+      "Title": "PGP: Data Science and Analytics",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/dl.jpg",
+      "Subtitle": "",
+      "Title": "Advance Deep Learning",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    }
+
+  ]
+
+  ProfessionProgram: Courses[] = [
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/dswp.jpg",
+      "Subtitle": "",
+      "Title": "Data Science With Python",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/pwb.jpg",
+      "Subtitle": "",
+      "Title": "Full Stack Web Development Python ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/se.jpg",
+      "Subtitle": "",
+      "Title": "Software Engineering",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/cc.jpg",
+      "Subtitle": "",
+      "Title": "Cloud Computing",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    }
+
+  ]
+
+
+  Cerificates: Courses[] = [
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "AI Chatbot with IBM whatson",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Learn 6 Blackbelt",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Predctive analytics with python",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Data Mining and Business Analytics with R",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "AI Stratergy For Leaders ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Advance Computer Vision ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Advance NLA ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },
+
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Applied Statistics ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": true
+    },  
+
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Business Forecasting with R ",
+      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },  
+
+  ]
+
+
+
   Categories: Category[] = [
     {
       "ImageUrl": "assets/images/ds.svg",
@@ -31,64 +179,43 @@ export class UserBodyComponent implements OnInit {
     }
 
   ];
-
-
-  // {
-  //   "ImageUrl": "assts/images/ml.svg",
-  //   "info": ["", ""],
-  //   "name": "Machine Learning"
-  // },
-  // {
-  //   "ImageUrl": "assets/images/ai.svg",
-  //   "info": ["", ""],
-  //   "name": "Artificial Intelligence"
-  // },
-
-
-  // , "", "", "", "Deep Learning"
-
-
-  //   1. PGP AI-ML 
-  // 2. Data Science With Python
-  // 3. Cloud Computing
-  // 4. Software Development
-  // 5. Game Development
   CoursesDetail: CoursesDetails[] = [
     {
       "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
+      "ImageUrl": "assets/images/pythonbasic.jpg",
       "Subtitle": "",
-      "Title": "PGP AI-ML",
-      "info": [`Ranked #1 PGP AI-ML Program in India for future oriented professionals`]
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Data Science With Python",
-      "info": [`Ranked #1 Data Science With Python Program in India for future oriented professionals`]
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Cloud Computing",
-      "info": [`Ranked #1 Cloud Computing Program in India for future oriented professionals`]
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Software Development",
-      "info": [`Ranked #1 Software Development Program in India for future oriented professionals`]
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Game Development",
-      "info": [`Ranked #1 Game Development Program in India for future oriented professionals`]
+      "Title": "Learn Python Programming",
+      "info": [ "Introduction to Programming", "What is python", "Basics of Python", "Logical Operators"]
     }
+    // ,
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Data Science With Python",
+    //   "info": [`Ranked #1 Data Science With Python Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Cloud Computing",
+    //   "info": [`Ranked #1 Cloud Computing Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Software Development",
+    //   "info": [`Ranked #1 Software Development Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Game Development",
+    //   "info": [`Ranked #1 Game Development Program in India for future oriented professionals`]
+    // }
 
   ];
 
@@ -100,10 +227,11 @@ export class UserBodyComponent implements OnInit {
     for (let index = 0; index < 3; index++) {
       let courseObj: Courses = {
         "Id": (index + 1),
-        "ImageUrl": 'assets/images/course.jpg',
+        "ImageUrl": 'assets/images/pg'+ (index +1)+'.jpg',
         "Title": `PG Program in ${this.programs[index]}`,
         "Subtitle": '12 Months | Online | Weekend',
         "info": `Ranked #${index} ${this.programs[index]} Program in India for future oriented professionals`,
+        "isAvailable" : true
       }
       this.CourseList.push(courseObj);
     }
@@ -155,8 +283,9 @@ class Courses {
   Id: number
   ImageUrl: string;
   Title: string;
-  Subtitle: string
-  info: string
+  Subtitle: string;
+  info: string;
+  isAvailable: boolean
 }
 
 class CoursesDetails {

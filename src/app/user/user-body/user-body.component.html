@@ -1,249 +1,157 @@
 <div>
-    <div class="container my-3 pt-5">
+    <div class="container py-15">
         <div class="text-center py-md-10 py-sm-2">
-            <h1>The Prismatic Advantage</h1>
+            <h1>The Prismo Advantage</h1>
         </div>
-        <div class="row courselist justify-content-center">
-            <div class="col-sm-12 col-md-4 card-deck " *ngFor="let course of CourseList">
-                <div class="card course cursor-pointer" attr.data-view="Programs{{ course.Id }}">
+        <div class="row courselist ">
+            <div class="col-sm-12 col-md-6 col-lg-4 mt-10" *ngFor="let course of CourseList">
+                <div class="card course cursor-pointer h-100" attr.data-view="Programs{{ course.Id }}">
                     <img src="{{course.ImageUrl}}" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">{{course.Title}}</h5>
+                        <h5 class="card-title text-capitalize">{{course.Title}}</h5>
                         <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
                         <p class="card-text text-secondary">
                             {{ course.info }}
                         </p>
-                        <!-- <div>
-                                    <button class="btn btn-outline-primary float-left">Apply</button>
-                                    <button class="btn btn-link float-right">Learn >></button>
-                                </div> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="d-flex justify-content-center">
-                <button class="btn-custom btn-outline-primary m-2" id="slick-prev">
-                    <i class="fa fa-arrow-left"></i>
-                </button>
-                <button class="btn-custom btn-outline-primary m-2" id="slick-next">
-                    <i class="fa fa-arrow-right"></i>
-                </button>
-            </div> -->
     </div>
-    <div class="container-fluid mb-4">
-        <h1 class="text-center py-15">
-            Program
-        </h1>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-4 p-5 card-deck" *ngFor="let item of CoursesDetail">
-                    <div class="card">
-                        <img src="{{item.ImageUrl}}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.Title}}</h5>
-                            <span>
-                                <p *ngFor="let i of item.info" class="mb-1"> {{ i }}</p>
-                            </span>
 
+    <div class="bg-gray my-15 py-10">
+        <div class="container">
+            <div class="row px-7">
+                <h2> Get Certified, Get Ahead with Our Programs</h2>
+            </div>
+        </div>
+        <div class="container my-15">
+            <div class="row px-7">
+                <h3 class="font-weight-bold"> Higher Education</h3>
+            </div>
+            <div class="row px-7">
+                <h6>Learn from global experts and get certified by the world's leading universities
+                </h6>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 mt-10" *ngFor="let course of HigherEducation">
+                    <div class="card shadow-sm cursor-pointer h-100">
+                        <img src="{{course.ImageUrl}}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold">{{course.Title}}</h5>
+                            <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
+                            <p class="card-text text-secondary">
+                                {{ course.info }}
+                            </p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn-custom btn-outline-primary float-left">Apply</button>
-                            <button class="btn btn-link  float-right my-auto text-decoration-none">
-                                Learn <i class="fa fa-arrow-right ml-2"></i>
-                            </button>
-                            <!-- <button class="btn-custom btn-outline-primary text-nowrap  btn-block mb-3">Apply now</button> -->
-                            <!-- <button class="btn-custom btn-outline-success  btn-block">Learn more</button> -->
+                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active">Apply </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="container">
-            <div class="row m-3" *ngFor="let item of CoursesDetail" attr.data-view-target="Programs{{ item.Id }}">
-                <div class="col-sm-12 col-md-4 mb-sm-3">
-                    <img src="assets/images/programsdetails.jpg" class="img-fluid">
+        <hr />
+        <div class="container my-15 ">
+            <div class="row px-7">
+                <h3 class="font-weight-bold"> Prefessional Program</h3>
+            </div>
+            <div class="row px-7">
+                <h6>Achieve your career goals with industry-recognized learning paths
+                </h6>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-10" *ngFor="let course of ProfessionProgram">
+                    <div class="card cursor-pointer  shadow-sm h-100">
+                        <img src="{{course.ImageUrl}}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize font-weight-bold">{{course.Title}}</h5>
+                            <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
+                            <p class="card-text text-secondary">
+                                {{ course.info }}
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-end">
+                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active" *ngIf="course.isAvailable">Apply </button>
+                            <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Comming Soon... </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-5">
+            </div>
+        </div>
+        <hr />
+        <div class="container my-15 ">
+            <div class="row px-7">
+                <h3 class="font-weight-bold"> Certification</h3>
+            </div>
+            <div class="row px-7 ">
+                <h6>Get certified by global certification bodies and deepen your expertise
+                </h6>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-10" *ngFor="let course of Cerificates">
+                    <div class="card cursor-pointer shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize font-weight-bold">{{course.Title}}</h5>
+                        </div>
+                        <div class="card-footer bg-white border-0 ">
+                            <div class="mb-3">
+                                <p class="card-text text-secondary">
+                                    {{ course.info }}
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start">
+                                <button class="btn btn-link px-0 font-weight-bold" *ngIf="course.isAvailable">
+                                    Get Cerified
+                                </button>
+                                <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Comming Soon... </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="container my-15 ">
+            <div class="row px-7">
+                <h3 class="font-weight-bold"> Coding For Junior</h3>
+            </div>
+            <div class="row px-7">
+                <h6>
+                    Make your kid ready to conquer tomorrow.
+                </h6>
+            </div>
+            <div class="row" *ngFor="let item of CoursesDetail" attr.data-view-target="Programs{{ item.Id }}">
+                <div class="col-sm-12 col-md-4 mb-sm-3 mt-10">
+                    <img src="{{item.ImageUrl}}" class="img-fluid w-100">
+                </div>
+                <div class="col-sm-12 col-md-5 mt-10">
                     <div class="benefits-content format-wrapper">
                         <h3 class="main-heading"> {{ item.Title }}</h3>
                         <span>
-                            <p *ngFor="let i of item.info" class="mb-1"> {{ i }}</p>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <button class="btn-custom btn-outline-primary text-nowrap  btn-block mb-3">Apply now</button>
-                    <button class="btn-custom btn-outline-success  btn-block">Learn more</button>
-                </div>
-            </div>
-        </div> -->
-    </div>
-
-    <!-- <div class="container-fluid mb-4">
-        <div>
-            <div class="text-center py-3">
-                <h1>Certification</h1>
-            </div>
-            <div class="py-3">
-                <div class="row justify-content-center">
-                    <div class="card col-sm-4 col-md-3  col-lg-2 col-xl-2 mx-15 p-3  category" *ngFor="let item of Categories">
-                        <div class="card-body text-center ">
-                            <img src="{{item.ImageUrl}}" class="img-overlay mb-10" />
-                            <h5 class=""> {{ item.name }}</h5>
-                            <p *ngFor="let i of item.info" class="mb-1">
-                                {{ i }}
-                            </p>
-                        </div>
-                        <div class="card-footer bg-white border-0 d-flex justify-content-center">
-                            <button class="btn btn-outline-primary float-left">Explore</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="container-fluid mb-4">
-
-        <div class="text-center py-3">
-            <h1>Certification</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 card-deck" *ngFor="let item of Categories">
-                <div class="card card-fliper">
-                    <div class="front-end">
-                        <img src="assets/images/course.jpg" class="card-img-top shadow-sm" />
-                        <div class="card-body">
-                            <!-- <img src="{{item.ImageUrl}}" class="img-overlay mb-10" /> -->
-                            <h5 class="font-weight-bold"> {{ item.name }}</h5>
-                            <p class="card-subtitle text-muted mb-15">
-                                20 lectures | 28 Hours | Begineer
-                            </p>
-                            <p class="text-success font-weight-bold">
-                                170 Student Applied
-                            </p>
-                        </div>
-                    </div>
-                    <div class="back-end">
-                        <div class="card-body text-white">
-                            <!-- <img src="{{item.ImageUrl}}" class="img-overlay mb-10" /> -->
-                            <h5 class="font-weight-bold font-italic">
-                                Features:
-                            </h5>
                             <ul>
-                                <li> Available anytime </li>
-                                <li> International Mentor </li>
-                                <li> Easy to Learn </li>
-                                <li> No Prequisitions </li>
+                                <li *ngFor="let i of item.info" class="mb-1"> {{ i }}</li>
                             </ul>
-                            <!-- <p class="card-subtitle text-muted mb-15">
-                                20 lectures | 28 Hours | Begineer
-                            </p> -->
-                            <button class="btn btn-outline-primary rounded-0 btn-block" onclick=""> Explore</button>
-                        </div>
+                        </span>
                     </div>
+                </div>
+                <div class="col-sm-12 col-md-3 mt-10">
+                    <button class="btn btn-secondary btn-block rounded-0 font-weight-bold">
+                        Comming Soon
+                    </button>
+                    <!-- <button class="btn-custom btn-outline-primary text-nowrap  btn-block mb-3">Apply now</button>
+                    <button class="btn-custom btn-outline-success  btn-block">Learn more</button> -->
                 </div>
             </div>
         </div>
-
     </div>
-
-    <!-- Our Partners -->
-    <!-- <div class="container">
-        <div class="text-center py-3">
-            <h1>Our Partners</h1>
-        </div>
-        <div class="py-3 mb-4">
-            <div class="row partners">
-                <div class="col-sm-2 mb-sm-5">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-2 mb-sm-3">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-2 mb-sm-3">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">                   
-                </div>
-                <div class="col-sm-2 mb-sm-3">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-2 mb-sm-3">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-2 mb-sm-3">
-                    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Our Partners -->
-
-    <!-- <div class="container">
-        <div class="text-center py-3">
-            <h1>Blogs</h1>
-        </div>
-        <div class="py-3 mb-4 row">
-            <div class="col-md-6 col-lg-4 col-sm-12 ">
-                <div class="card cursor-pointer my-3">
-                    <img src="assets/images/blog1.jpg" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h5 class="card-title">Interesting facts about AI</h5>
-                        <p class="card-text text-secondary">
-                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic...
-                        </p>
-                        <hr>
-                        <span class="float-right">
-                            <button class="btn btn-link m-2">
-                                Read more <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-sm-12 ">
-                <div class="card cursor-pointer my-3">
-                    <img src="assets/images/blog1.jpg" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h5 class="card-title">Interesting facts about AI</h5>
-                        <p class="card-text text-secondary">
-                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic...
-                        </p>
-                        <hr>
-                        <span class="float-right">
-                            <button class="btn btn-link m-2">
-                                Read more <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-sm-12 ">
-                <div class="card cursor-pointer my-5">
-                    <img src="assets/images/blog1.jpg" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h5 class="card-title">Interesting facts about AI</h5>
-                        <p class="card-text text-secondary">
-                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic...
-                        </p>
-                        <hr>
-                        <span class="float-right">
-                            <button class="btn btn-link m-2">
-                                Read more <i class="fa fa-arrow-right"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="container mb-15">
         <div class="text-center pt-15 pb-8">
             <h1>Blogs</h1>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-4 card-deck">
-                <div class="card shadow-sm rounded-0">
+        <div class="row ">
+            <div class="col-sm-12 col-md-4 mt-10">
+                <div class="card shadow-sm rounded-0 h-100">
                     <div class="card-body">
                         <h5 class="card-title text-capitalize font-weight-bold pt-2">How to become productive....?</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-capitalize pb-5">some tips to be productive</h6>
@@ -257,7 +165,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 card-deck">
+            <div class="col-sm-12 col-md-4 mt-10">
                 <div class="card shadow-sm rounded-0">
                     <!-- <img src="assets/images/blog1.jpg" class="card-img"> -->
                     <div class="card-body">
@@ -273,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4 card-deck">
+            <div class="col-sm-12 col-md-4 mt-10">
                 <div class="card shadow-sm rounded-0">
                     <div class="card-body">
                         <h5 class="card-title text-capitalize font-weight-bold pt-2">How to become productive....?</h5>
