@@ -1,9 +1,3 @@
-/* @import "../../../assets/css/bootstrap.min.css";
-@import "../../../assets/css/slick-theme.css";
-@import "../../../assets/css/slick.css";
-@import "../../../assets/css/styles.css";
-@import "../../../assets/css/responsive-mp.css"; */
-
 .card-fliper .front-end {
     display: inline-block;
     width: 100%;
@@ -36,4 +30,12 @@
     display: block;
     z-index: 0;
     opacity: 0.9;
+}
+
+.subtext {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #51565e;
+    padding-right: 20px;
 }

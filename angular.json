@@ -42,8 +42,7 @@
                             "src/assets/js/pcoded.min.js",
                             "src/assets/js/slick.min.js",
                             "src/assets/js/custom.js",
-                            "src/assets/js/admin-dashboard-script.js",
-                            "src/assets/js/jquery.mCustomScrollbar.concat.min.js"
+                            "src/assets/js/admin-dashboard-script.js"
                         ]
                     },
                     "configurations": {
@@ -62,7 +61,7 @@
                             "buildOptimizer": true,
                             "budgets": [{
                                     "type": "initial",
-                                    "maximumWarning": "2mb",
+                                    "maximumWarning": "4mb",
                                     "maximumError": "5mb"
                                 },
                                 {
