@@ -1,197 +1,81 @@
-<div id="pcoded" class="pcoded">
-    <div class="pcoded-overlay-box"></div>
-    <div class="pcoded-container navbar-wrapper">
-        <nav class="navbar header-navbar pcoded-header">
-            <div class="navbar-wrapper">
-                <div class="navbar-logo">
-                    <a class="mobile-menu cursor-pointer" id="mobile-collapse">
-                        <i class="ti-menu"></i>
-                    </a>
-                    <a class="mobile-search morphsearch-search cursor-pointer">
-                        <i class="ti-search"></i>
-                    </a>
-                    <a>
-                        <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
-                    </a>
-                    <a class="mobile-options cursor-pointer">
-                        <i class="ti-more"></i>
-                    </a>
-                </div>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Prismo.ai</h3>
+        </div>
 
-                <div class="navbar-container container">
-                    <ul class="nav-left p-ul">
-                        <li>
-                            <div class="sidebar_toggle">
-                                <a href="javascript:void(0)">
-                                    <i class="ti-menu"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <!-- <a onclick="javascript:toggleFullScreen()">
-                                <i class="ti-fullscreen"></i>
-                            </a> -->
-                        </li>
-                    </ul>
-                    <ul class="nav-right p-ul">
-                        <!-- <li class="header-notification">
-                            <a>
-                                <i class="ti-bell"></i>
-                                <span class="badge bg-c-pink"></span>
-                            </a>
-                            <ul class="show-notification">
-                                <li>
-                                    <h6>Notifications</h6>
-                                    <label class="label label-danger">New</label>
-                                </li>
-                                <li>
-                                    <div class="media">
-                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <h5 class="notification-user">John Doe</h5>
-                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.
-                                            </p>
-                                            <span class="notification-time">30 minutes ago</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media">
-                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <h5 class="notification-user">Joseph William</h5>
-                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.
-                                            </p>
-                                            <span class="notification-time">30 minutes ago</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media">
-                                        <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <h5 class="notification-user">Sara Soudein</h5>
-                                            <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.
-                                            </p>
-                                            <span class="notification-time">30 minutes ago</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li class="user-profile header-notification p-ul">
-                            <a>
-                                <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                <span>John Doe</span>
-                                <i class="ti-angle-down"></i>
-                            </a>
-                            <ul class="show-notification profile-notification">
-                                <!-- <li>
-                                    <a>
-                                        <i class="ti-settings"></i> Settings
-                                    </a>
-                                </li>
-                                <li>
-                                    <a >
-                                        <i class="ti-user"></i> Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a >
-                                        <i class="ti-email"></i> My Messages
-                                    </a>
-                                </li>
-                                <li>
-                                    <a >
-                                        <i class="ti-lock"></i> Lock Screen
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a>
-                                        <i class="ti-layout-sidebar-left"></i> Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+        <ul class="list-unstyled components">
+            <p>Contents</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home Page Setup</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a [routerLink]="['/administrator/setup/prismoadvtg']">Prismo.ai Advantage</a>
+                    </li>
+                    <li>
+                        <a href="#">Higher Education</a>
+                    </li>
+                    <li>
+                        <a href="#">Professional Programs</a>
+                    </li>
+                    <li>
+                        <a href="#">Certifications</a>
+                    </li>
+                    <li>
+                        <a href="#">Coding for Juniors</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Course Setup</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="#" class="download">Dashboard</a>
+            </li>
+            
+        </ul>
+
+       
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+       
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <form class="form-inline mt-2 mt-md-0">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                </form>
+                
             </div>
         </nav>
-        <div class="pcoded-main-container">
-            <div class="pcoded-wrapper">
-                <nav class="pcoded-navbar">
-                    <div class="sidebar_toggle"><a><i class="icon-close icons"></i></a></div>
-                    <div class="pcoded-inner-navbar main-menu">
-                        <!-- <div class="">
-                            <div class="main-menu-header">
-                                <img class="img-40 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
-                                <div class="user-details">
-                                    <span>John Doe</span>
-                                    <span id="more-details">UX Designer<i class="ti-angle-down"></i></span>
-                                </div>
-                            </div>
+        <router-outlet></router-outlet>
+        <!-- <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                            <div class="main-menu-content">
-                                <ul>
-                                    <li class="more-details">
-                                        <a ><i class="ti-user"></i>View Profile</a>
-                                        <a><i class="ti-settings"></i>Settings</a>
-                                        <a ><i
-                                                class="ti-layout-sidebar-left"></i>Logout</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pcoded-search">
-                            <span class="searchbar-toggle"> </span>
-                            <div class="pcoded-search-box ">
-                                <input type="text" placeholder="Search">
-                                <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
-                            </div>
-                        </div> -->
-                        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.home">Home</div>
-                        <ul class="pcoded-item pcoded-left-item">
-                            <li class="active">
-                                <a>
-                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.category.home.dashboard">Dashboard</span>
-                                    <span class="pcoded-mcaret"></span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.master">Master</div>
-                        <ul class="pcoded-item pcoded-left-item">
-                            <li class="pcoded-hasmenu">
-                                <a href="javascript:void(0)">
-                                    <span class="pcoded-micon">
-                                        <i class="ti-home"></i><b>S</b></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.category.master.Setup">Setup</span>
-                                    <span class="pcoded-mcaret"></span>
-                                </a>
-                                <ul class="pcoded-submenu">
-                                    <li class="cursor-pointer">
-                                        <a [routerLink]="['administrator' ,'setup', 'carousel']" routerLinkActive="active">
-                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.category.master.Setup.Carousel">Carousel Master</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                    <li class="cursor-pointer">
-                                        <a [routerLink]="['administrator' ,'setup', 'testimony']" routerLinkActive="active">
-                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.category.master.Setup.Testimony">Testimony Master</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="pcoded-content">
-                    <router-outlet></router-outlet>
-                </div>
-            </div>
-        </div>
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="line"></div>
+
+        <h3>Lorem Ipsum Dolor</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
     </div>
 </div>

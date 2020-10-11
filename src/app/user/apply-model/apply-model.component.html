@@ -1,0 +1,55 @@
+<div id="ApplyNow">
+    <button class="btn btn-primary btn-lg d-none" id="applyModalCaller" (click)="openModel" data-toggle="modal" data-target="#applyModal"> Call Modal </button>
+    <div class="modal fade" id="applyModal" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="applyModalLabel">
+                        Apply For : {{ data?.Title }}
+                    </h5>
+                    <button type="button" id="closeModal" class="text-white cursor-pointer close" (click)="closeModal()" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white cursor-pointer">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" formControlName="Name">
+                            <div *ngIf="f.Name.touched && f.Name.invalid" class="m-2">
+                                <p *ngIf="f.Name.errors.required" class="text-danger">Name is Required.</p>
+                                <p *ngIf="f.Name.errors.pattern" class="text-danger">Enter valid Name.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" formControlName="Email">
+                            <div *ngIf="f.Email.touched && f.Email.invalid" class="m-2">
+                                <p *ngIf="f.Email.errors.required" class="text-danger">Email is required.</p>
+                                <p *ngIf="f.Email.errors.pattern" class="text-danger">Enter valid email address.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Contact Number</label>
+                            <input type="text" class="form-control" formControlName="phoneNo">
+                            <div *ngIf="f.phoneNo.touched && f.phoneNo.invalid" class="m-2">
+                                <p *ngIf="f.phoneNo.errors.required" class="text-danger">Contact Number is required.</p>
+                                <p *ngIf="f.phoneNo.errors.pattern" class="text-danger">Input should be numberic and length should be 10.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <!-- [disabled]="!form.valid" -->
+                    <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+                    <!-- <button type="button" class="btn btn-primary">Apply</button> -->
+                    <button type="submit" class="btn btn-secondary" (click)="closeModal()" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
