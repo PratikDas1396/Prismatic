@@ -1,3 +1,4 @@
+<!-- <button class="btn btn-primary btn-lg " (click)="callModel()"> Call Modal </button> -->
 <div>
     <div class="container py-15">
         <div class="text-center py-md-10 py-sm-2">
@@ -10,9 +11,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-capitalize">{{course.Title}}</h5>
                         <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
-                        <p class="card-text text-secondary">
-                            {{ course.info }}
-                        </p>
+                        <p class="card-text text-secondary" *ngFor="let e of course.info; let i = index">{{i +1}}. {{ e }}</p>
                     </div>
                 </div>
             </div>
@@ -22,7 +21,7 @@
     <div class="bg-gray my-15 py-10">
         <div class="container">
             <div class="row px-7">
-                <h2> Get Certified, Get Ahead with Our Programs</h2>
+                <h2> Explore Our Programs and Certifications</h2>
             </div>
         </div>
         <div class="container my-15">
@@ -30,7 +29,7 @@
                 <h3 class="font-weight-bold"> Higher Education</h3>
             </div>
             <div class="row px-7">
-                <h6>Learn from global experts and get certified by the world's leading universities
+                <h6>Learn from our experts and get certified
                 </h6>
             </div>
             <div class="row">
@@ -45,7 +44,7 @@
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active">Apply </button>
+                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" (click)="callModel(course)">Apply </button>
                         </div>
                     </div>
                 </div>
@@ -54,7 +53,7 @@
         <hr />
         <div class="container my-15 ">
             <div class="row px-7">
-                <h3 class="font-weight-bold"> Prefessional Program</h3>
+                <h3 class="font-weight-bold"> Prefessional Programs</h3>
             </div>
             <div class="row px-7">
                 <h6>Achieve your career goals with industry-recognized learning paths
@@ -73,7 +72,7 @@
                         </div>
                         <div class="card-footer bg-white border-0 d-flex justify-content-end">
                             <button class="btn btn-outline-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active" *ngIf="course.isAvailable">Apply </button>
-                            <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Comming Soon... </p>
+                            <p class="px-0 font-weight-bold text-primary mb-2 " style="font-size: smaller;" *ngIf="!course.isAvailable">Coming Soon... </p>
                         </div>
                     </div>
                 </div>
@@ -82,15 +81,15 @@
         <hr />
         <div class="container my-15 ">
             <div class="row px-7">
-                <h3 class="font-weight-bold"> Certification</h3>
+                <h3 class="font-weight-bold"> Certifications</h3>
             </div>
             <div class="row px-7 ">
-                <h6>Get certified by global certification bodies and deepen your expertise
+                <h6>Get certified by experienced industry professionals and deepen your expertise
                 </h6>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4 mt-10" *ngFor="let course of Cerificates">
-                    <div class="card cursor-pointer shadow-sm h-100">
+                    <div class="card cursor-pointer shadow-sm h-100" style="background-color: #f3fff8; border-left:5px solid green">
                         <div class="card-body">
                             <h5 class="card-title text-capitalize font-weight-bold">{{course.Title}}</h5>
                         </div>
@@ -102,9 +101,9 @@
                             </div>
                             <div class="d-flex justify-content-start">
                                 <button class="btn btn-link px-0 font-weight-bold" *ngIf="course.isAvailable">
-                                    Get Cerified
+                                    Get Certified
                                 </button>
-                                <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Comming Soon... </p>
+                                <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Coming Soon... </p>
                             </div>
                         </div>
                     </div>
@@ -114,11 +113,11 @@
         <hr />
         <div class="container my-15 ">
             <div class="row px-7">
-                <h3 class="font-weight-bold"> Coding For Junior</h3>
+                <h3 class="font-weight-bold"> Coding For Juniors</h3>
             </div>
             <div class="row px-7">
                 <h6>
-                    Make your kid ready to conquer tomorrow.
+                    Make your kid ready to conquer tomorrow!
                 </h6>
             </div>
             <div class="row" *ngFor="let item of CoursesDetail" attr.data-view-target="Programs{{ item.Id }}">
@@ -137,7 +136,7 @@
                 </div>
                 <div class="col-sm-12 col-md-3 mt-10">
                     <button class="btn btn-secondary btn-block rounded-0 font-weight-bold">
-                        Comming Soon
+                        Coming Soon
                     </button>
                     <!-- <button class="btn-custom btn-outline-primary text-nowrap  btn-block mb-3">Apply now</button>
                     <button class="btn-custom btn-outline-success  btn-block">Learn more</button> -->

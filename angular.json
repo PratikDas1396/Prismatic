@@ -39,10 +39,8 @@
                             "src/assets/js/jquery.min.js",
                             "src/assets/js/popper.min.js",
                             "src/assets/js/bootstrap.min.js",
-                            "src/assets/js/pcoded.min.js",
                             "src/assets/js/slick.min.js",
-                            "src/assets/js/custom.js",
-                            "src/assets/js/admin-dashboard-script.js"
+                            "src/assets/js/custom.js"
                         ]
                     },
                     "configurations": {

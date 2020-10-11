@@ -1,13 +1,52 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ModelService } from 'src/app/services/index';
 @Component({
   selector: 'app-user-body',
   templateUrl: './user-body.component.html',
   styleUrls: ['./user-body.component.css']
 })
+
+
 export class UserBodyComponent implements OnInit {
 
-  CourseList: Courses[] = [];
+  CourseList: CoursesDetails[] = [
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/CL.jpg",
+      "Subtitle": "",
+      "Title": "Complete Learning",
+      "info": [
+        "Cutting-edge in-depth curriculum",
+        "Courses personalized to your needs",
+        "Online access to study and practice labs"
+      ],
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/CG.jpg",
+      "Subtitle": "",
+      "Title": "Full mentoring",
+      "info": [
+        "One-on-one mentoring",
+        "Flexible mentoring sessions and Q&A",
+        "Industry case studies & projects"
+      ],
+      "isAvailable": true
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/OM.jpg",
+      "Subtitle": "",
+      "Title": "Career Guidance",
+      "info": [
+        "Develop job-ready skills",
+        "Personal career support and counselling",
+        "Job recommendations"
+      ],
+      "isAvailable": true
+    }
+  ];
 
   programs: string[] = [
     "Data Science", "Cloud Computing", "Machine Learning"
@@ -16,26 +55,26 @@ export class UserBodyComponent implements OnInit {
   HigherEducation: Courses[] = [
     {
       "Id": 1,
-      "ImageUrl": "assets/images/ml.jpg",
+      "ImageUrl": "assets/images/AI&ML.jpg",
       "Subtitle": "",
-      "Title": "PGP: AI ML",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "Title": "PGP AI ML",
+      "info": "Duration : 12 Months | Fully Online",
       "isAvailable": true
     },
     {
       "Id": 1,
-      "ImageUrl": "assets/images/ds.jpg",
+      "ImageUrl": "assets/images/DA.jpg",
       "Subtitle": "",
-      "Title": "PGP: Data Science and Analytics",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "Title": "PGP Data Science and Analytics",
+      "info": "Duration : 12 Months | Fully Online",
       "isAvailable": true
     },
     {
       "Id": 1,
-      "ImageUrl": "assets/images/dl.jpg",
+      "ImageUrl": "assets/images/AIML.jpeg",
       "Subtitle": "",
       "Title": "Advance Deep Learning",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 12 Months | Fully Online",
       "isAvailable": true
     }
 
@@ -44,10 +83,19 @@ export class UserBodyComponent implements OnInit {
   ProfessionProgram: Courses[] = [
     {
       "Id": 1,
-      "ImageUrl": "assets/images/dswp.jpg",
+      "ImageUrl": "assets/images/dswpp.jpg",
       "Subtitle": "",
       "Title": "Data Science With Python",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 6 Months | Online",
+      "isAvailable": true
+    },
+
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/se.jpg",
+      "Subtitle": "",
+      "Title": "Software Engineering",
+      "info": "Duration : 6 Months | Online",
       "isAvailable": true
     },
     {
@@ -55,23 +103,15 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/pwb.jpg",
       "Subtitle": "",
       "Title": "Full Stack Web Development Python ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 6 Months | Online",
       "isAvailable": false
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/se.jpg",
-      "Subtitle": "",
-      "Title": "Software Engineering",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": true
     },
     {
       "Id": 1,
       "ImageUrl": "assets/images/cc.jpg",
       "Subtitle": "",
       "Title": "Cloud Computing",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 6 Months | Online",
       "isAvailable": false
     }
 
@@ -84,58 +124,15 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "AI Chatbot with IBM whatson",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": true
     },
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
-      "Title": "Learn 6 Blackbelt",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Predctive analytics with python",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Data Mining and Business Analytics with R",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
-
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "AI Stratergy For Leaders ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
-    
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Advance Computer Vision ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
-
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
       "Title": "Advance NLA ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": true
     },
 
@@ -144,23 +141,60 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Applied Statistics ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": true
-    },  
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Learn 6 Sigma",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Predictive analytics with python",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Data Mining and Business Analytics with R",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
 
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
-      "Title": "Business Forecasting with R ",
-      "info": "Course Duration : 3 Months | 6 Months | 9 Months",
+      "Title": "AI Stratergy For Leaders ",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": false
-    },  
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Advance Computer Vision ",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Business Forecasting with R ",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
 
   ]
-
-
-
   Categories: Category[] = [
     {
       "ImageUrl": "assets/images/ds.svg",
@@ -184,8 +218,9 @@ export class UserBodyComponent implements OnInit {
       "Id": 1,
       "ImageUrl": "assets/images/pythonbasic.jpg",
       "Subtitle": "",
-      "Title": "Learn Python Programming",
-      "info": [ "Introduction to Programming", "What is python", "Basics of Python", "Logical Operators"]
+      "Title": "Learn Python Programming!",
+      "info": ["Introduction to Programming", "What is python", "Basics of Python", "Logical Operators"],
+      "isAvailable": false
     }
     // ,
     // {
@@ -221,20 +256,22 @@ export class UserBodyComponent implements OnInit {
 
   responsiveOptions;
 
-  constructor() {
+  constructor(
+    private applyModelService : ModelService
+  ) {
     // var courses: Courses[] = [];
     // var coursesdetails: CoursesDetails[] = [];
-    for (let index = 0; index < 3; index++) {
-      let courseObj: Courses = {
-        "Id": (index + 1),
-        "ImageUrl": 'assets/images/pg'+ (index +1)+'.jpg',
-        "Title": `PG Program in ${this.programs[index]}`,
-        "Subtitle": '12 Months | Online | Weekend',
-        "info": `Ranked #${index} ${this.programs[index]} Program in India for future oriented professionals`,
-        "isAvailable" : true
-      }
-      this.CourseList.push(courseObj);
-    }
+    // for (let index = 0; index < 3; index++) {
+    //   let courseObj: Courses = {
+    //     "Id": (index + 1),
+    //     "ImageUrl": 'assets/images/pg'+ (index +1)+'.jpg',
+    //     "Title": `PG Program in ${this.programs[index]}`,
+    //     "Subtitle": '12 Months | Online | Weekend',
+    //     "info": `Ranked #${index} ${this.programs[index]} Program in India for future oriented professionals`,
+    //     "isAvailable" : true
+    //   }
+    //   this.CourseList.push(courseObj);
+    // }
 
     // for (let index = 1; index <= 4; index++) {
     //   let s: string[] = []
@@ -275,6 +312,10 @@ export class UserBodyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  callModel(object: any){
+    this.applyModelService.showApplyModel(object);
+  }
+
 }
 
 
@@ -292,8 +333,9 @@ class CoursesDetails {
   Id: number
   ImageUrl: string;
   Title: string;
-  Subtitle: string
-  info: string[]
+  Subtitle: string;
+  info: string[];
+  isAvailable: boolean
 }
 
 class Category {

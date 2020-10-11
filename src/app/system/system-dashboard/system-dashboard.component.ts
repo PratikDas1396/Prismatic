@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 declare var AdminDashboardPageLoad: any
 declare var MenuSetup: any
 @Component({
@@ -13,7 +14,11 @@ export class SystemDashboardComponent implements OnInit {
   ngOnInit(): void {
     MenuSetup();
     AdminDashboardPageLoad();
-    
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+  });
   }
 
 }

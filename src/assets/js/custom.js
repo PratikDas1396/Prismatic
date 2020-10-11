@@ -7,12 +7,12 @@ $(function() {
 
 
     $(document).on('click', '[data-toggle="dropdown"]', function(e) {
-        debugger;
+
         $(e.currentTarget).siblings().toggleClass('show')
     })
 
     // $(document).on('click', '[data-view]', function(e) {
-    //     debugger;
+
     //     let target = $(e.currentTarget).data("view");
     //     $('[data-view-target="' + target + '"]')[0].scrollIntoView({
     //         behavior: "smooth", // or "auto" or "instant"

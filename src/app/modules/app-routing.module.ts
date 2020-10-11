@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent } from '../system/system-index';
+import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, PrismoAdvtgComponent } from '../system/system-index';
 import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
@@ -21,7 +21,8 @@ const appRoutes: Routes = [
       {
         path: 'setup', children: [
           { path: 'carousel', component: CarouselMasterComponent },
-          { path: 'testimony', component: TestimonyMasterComponent }
+          { path: 'testimony', component: TestimonyMasterComponent },
+          { path: 'prismoadvtg', component: PrismoAdvtgComponent }
         ]
       },
     ]

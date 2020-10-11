@@ -5,11 +5,17 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './user/header/header.component';
 import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent } from './system/system-index';
+import {InputNumberModule} from 'primeng/inputnumber';
+import { HttpClientModule } from '@angular/common/http'
 
 import {
   CarouselTemplateComponent, HomeTemplateComponent, CoursesComponent, UserBodyComponent,
   TestimonialComponent, UserDashboardComponent, CourseDetailsComponent
 } from './user/user-index';
+import { PrismoAdvtgComponent } from './system/prismo-advtg/prismo-advtg.component';
+import { ApplyModelComponent } from './user/apply-model/apply-model.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
@@ -25,12 +31,18 @@ import {
     UserBodyComponent,
     CourseDetailsComponent,
     CarouselMasterComponent,
-    TestimonyMasterComponent
+    TestimonyMasterComponent,
+    PrismoAdvtgComponent,
+    ApplyModelComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InputNumberModule,
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
