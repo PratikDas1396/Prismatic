@@ -16,6 +16,7 @@ import { PrismoAdvtgComponent } from './system/prismo-advtg/prismo-advtg.compone
 import { ApplyModelComponent } from './user/apply-model/apply-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AlertComponent } from './alert/alert.component';
     TestimonyMasterComponent,
     PrismoAdvtgComponent,
     ApplyModelComponent,
-    AlertComponent
+    AlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

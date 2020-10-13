@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
 import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, PrismoAdvtgComponent } from '../system/system-index';
 import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
+
   {
     path: '',
     component: UserDashboardComponent,
@@ -11,7 +13,7 @@ const appRoutes: Routes = [
       { path: '', component: HomeTemplateComponent },
       { path: 'home', redirectTo: '/' },
       { path: 'courses', component: CoursesComponent },
-      { path: 'courseinfo', component: CourseDetailsComponent }
+      { path: 'courseinfo', component: CourseDetailsComponent },
     ],
   },
   {
@@ -24,9 +26,11 @@ const appRoutes: Routes = [
           { path: 'testimony', component: TestimonyMasterComponent },
           { path: 'prismoadvtg', component: PrismoAdvtgComponent }
         ]
-      },
+      }
+      ,
     ]
   },
+  { path: 'login', component: LoginComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
