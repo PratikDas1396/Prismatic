@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { AuthenticateService } from 'src/app/services';
 declare var $: any;
-declare var AdminDashboardPageLoad: any
-declare var MenuSetup: any
 @Component({
   selector: 'app-system-dashboard',
   templateUrl: './system-dashboard.component.html',
@@ -9,16 +10,29 @@ declare var MenuSetup: any
 })
 export class SystemDashboardComponent implements OnInit {
 
-  constructor() { }
+  authSubscriber: Subscription ;
+  constructor(private auth: AuthenticateService,
+    private router: Router) {
+    this.authSubscriber = this.auth.currentUser.subscribe(resp => {
+      if (resp === null || resp == "") {
+        this.router.navigate(['login'])
+        this.authSubscriber.unsubscribe();
+      }
+    })
+  }
 
   ngOnInit(): void {
-    MenuSetup();
-    AdminDashboardPageLoad();
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
-          $('#sidebar').toggleClass('active');
+        $('#sidebar').toggleClass('active');
       });
-  });
+    });
+  }
+
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['login'])
+    this.authSubscriber.unsubscribe();
   }
 
 }

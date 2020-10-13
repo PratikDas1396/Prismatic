@@ -35,15 +35,15 @@
             <li>
                 <a href="#" class="download">Dashboard</a>
             </li>
-            
+
         </ul>
 
-       
+
     </nav>
 
     <!-- Page Content  -->
     <div id="content">
-       
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
 
@@ -52,10 +52,10 @@
                     <span>Toggle Sidebar</span>
                 </button>
                 <form class="form-inline mt-2 mt-md-0">
-                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal" (click)="logout()">
                         <i class="fa fa-fw fa-sign-out"></i>Logout</a>
                 </form>
-                
+
             </div>
         </nav>
         <router-outlet></router-outlet>

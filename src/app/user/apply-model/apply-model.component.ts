@@ -51,7 +51,6 @@ export class ApplyModelComponent implements OnInit {
     this.leadService.insertLeadData(l)
       .pipe(first())
       .subscribe(response => {
-        
         if (response["status"] == 0) {
           CloseModel('#closeModal')
           this.form.reset()

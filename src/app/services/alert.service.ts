@@ -21,14 +21,12 @@ export class AlertService {
         });
     }
 
-    notify(type: string, message: string, keepAfterNavigationChange = false) {
-        
+    notify(type: string, message: string, displaytime: number = 5000, keepAfterNavigationChange = false) {
         this.keepAfterNavigationChange = keepAfterNavigationChange;
-        this.subject.next({ type, message });
+        this.subject.next({ type, message, displaytime }, );
     }
 
     showNotification(): Observable<any> {
-        
         return this.subject.asObservable();
     }
 }
