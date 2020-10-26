@@ -1,48 +1,31 @@
-<div class="bg-dark">
+<div class="bg-dark" *ngIf="Course">
     <div class="card course-info text-white">
         <img src="assets/images/img1.jpg" class="card-img" alt="...">
         <div class="card-img-overlay course-intro">
             <h1 class="text-white">
-                Post Graduation Program - Data Science with Python
+                {{ Course.Name }}
             </h1>
             <h5 class="card-subtitle font-weight-normal mb-10">
-                Learn Python like a Professional! Start from the basics and go all the way to creating your own applications and games!
+                {{ Course.TagLine }}
             </h5>
             <div class="d-flex justify-content-start">
-                <h4><span class="badge badge-warning ml-0">Begineer</span></h4>
-                <h4><span class="badge badge-warning">Python</span></h4>
-                <h4><span class="badge badge-warning">Course</span></h4>
+                <h4><span class="badge badge-warning ml-0" *ngFor="let item of Course.Keywords">{{item}}</span></h4>
             </div>
-            <p class="card-title text-light">
+            <!-- <p class="card-title text-light">
                 10234 Students Applied
-            </p>
+            </p> -->
         </div>
     </div>
 </div>
 
-<div class="container my-10">
+<div class="container my-10" *ngIf="Course">
     <div class="row">
         <div class="col-sm-8">
             <div class="jumbotron py-13">
                 <h2 class="font-weight-bold">What you'll learn </h2>
                 <ul class="list-reset">
-                    <li>
-                        Learn to use Python professionally, learning both Python 2 and Python 3!
-                    </li>
-                    <li>
-                        Create games with Python, like Tic Tac Toe and Blackjack!
-                    </li>
-                    <li>
-                        Learn advanced Python features, like the collections module and how to work with timestamps!
-                    </li>
-                    <li>
-                        Learn to use Object Oriented Programming with classes!
-                    </li>
-                    <li>
-                        Understand complex topics, like decorators.
-                    </li>
-                    <li>
-                        Understand how to use both the Jupyter Notebook and create .py files
+                    <li *ngFor="let item of Course.WhatToLearn">
+                        {{ item }}
                     </li>
                 </ul>
             </div>
@@ -52,59 +35,29 @@
                     <h3 class="font-weight-bold">Course Content</h3>
                     <hr />
                     <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
+                        <div class="card" *ngFor="let item of Course.Modules">
+                            <div class="card-header" id="heading{{item.RecID}}">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Chapter 1
+                                    <button class="btn btn-link btn-block font-weight-bold text-left" type="button" data-toggle="collapse" attr.data-target="#collapse{{item.RecID}}" attr.aria-expanded="true" attr.aria-controls="collapse{{item.RecID}}">
+                                        Module  {{ item.RecID }} : {{ item.ModuleName }}
                                     </button>
                                 </h2>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="collapse{{item.RecID}}" class="collapse" attr.aria-labelledby="heading{{item.RecID}}" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Chapter 2
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Chapter 3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    <ol>
+                                        <li *ngFor="let topic of item.Topics">
+                                            {{ topic }}
+                                        </li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card border-0">
+            <div class="card border-0 d-none">
                 <div class="card-body px-0">
                     <h3 class="font-weight-bold">Instructor</h3>
                     <hr />
@@ -130,31 +83,32 @@
                     <h4 class="font-weight-bold">This course includes: </h4>
                     <ul class="unstyled-list udlite-block-list">
                         <li class="mb-3">
-                            <i class="fa fa-television mr-5" aria-hidden="true"></i> 21.5 hours on-demand video
+                            <i class="fa fa-television mr-5" aria-hidden="true"></i> {{ Course.Duration }}
                         </li>
                         <li class="mb-3">
-                            <i class="fa fa-file-text-o mr-5" aria-hidden="true"></i> 14 articles
+                            <i class="fa fa-file-text-o mr-5" aria-hidden="true"></i> {{ Course.Modules.length }} Modules
                         </li>
-                        <li class="mb-3">
+                        <!-- <li class="mb-3">
                             <i class="fa fa-code mr-5" aria-hidden="true"></i> 14 articles 19 coding exercises
-                        </li>
+                        </li> -->
                         <li class="mb-3">
                             <i class="fa fa-universal-access mr-5" aria-hidden="true"></i> Full lifetime access
                         </li>
                         <li class="mb-3">
-                            <i class="fa fa-mobile-phone mr-5" aria-hidden="true"></i> Access on mobile and TV
+                            <i class="fa fa-mobile-phone mr-5" aria-hidden="true"></i> {{ Course.ModeOfDelivery }}
                         </li>
                         <li class="mb-3">
-                            <i class="fa fa-certificate mr-5" aria-hidden="true"></i> Certificate of completion
+                            <i class="fa fa-play mr-5" aria-hidden="true"></i> Starts on : {{ Course.Starts }}
                         </li>
+                        <!-- <li class="mb-3">
+                            <i class="fa fa-certificate mr-5" aria-hidden="true"></i> Certificate of completion
+                        </li> -->
                     </ul>
                 </div>
 
                 <button class="btn p-7 btn-primary rounded-0 btn-block"> Apply </button>
                 <button class="btn p-7 btn-success rounded-0 btn-block"> Download Broucher </button>
             </div>
-
-
         </div>
     </div>
 </div>
