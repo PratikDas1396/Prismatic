@@ -1,0 +1,78 @@
+<div id="LeadTracking">
+    <button class="btn btn-primary btn-lg d-none" id="leadTrackerModalCaller" (click)="openModel" data-toggle="modal" data-target="#applyModal"> Call Modal </button>
+    <div class="modal fade" id="applyModal" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="applyModalLabel">
+                        Lead Information : {{ data?.LeadID }}
+                    </h5>
+                    <button type="button" id="closeModal" class="text-white cursor-pointer close" (click)="closeModal()" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white cursor-pointer">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="control-label">
+                                    Name
+                                </span>
+                                <h6>{{ data?.Name }}</h6>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="control-label">
+                                    Email
+                                </span>
+                                <h6>{{ data?.Email }}</h6>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="control-label">
+                                    Contact No
+                                </span>
+                                <h6>{{ data?.ContactNo }}</h6>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <span class="control-label">
+                                    Course Name
+                                </span>
+                                <h6>{{ data?.CourseName }}</h6>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="control-label">
+                                    Disposition
+                                </span>
+                                <select [(value)]="Disposition" class="form-control">
+                                    <option value="">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="control-label">
+                                    Remark
+                                    <span class="text-alert"> *</span>
+                                </span>
+                                <div>
+                                    <textarea class="form-control" rows="5" [(value)]="Remarks"></textarea>
+                                </div>
+                            </div>
+                            {{ Remarks }}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <!-- [disabled]="!form.valid" -->
+                    <button class="btn btn-primary" type="submit" (click)="submit()">Save</button>
+                    <!-- <button type="button" class="btn btn-primary">Apply</button> -->
+                    <button type="submit" class="btn btn-secondary" (click)="closeModal()" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

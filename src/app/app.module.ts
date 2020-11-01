@@ -4,10 +4,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './user/header/header.component';
-import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent } from './system/system-index';
-import {InputNumberModule} from 'primeng/inputnumber';
-import { HttpClientModule } from '@angular/common/http'
-
+import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, LeadDetailsComponent, LeadTrackingComponent } from './system/system-index';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { HttpClientModule } from '@angular/common/http';
 import {
   CarouselTemplateComponent, HomeTemplateComponent, CoursesComponent, UserBodyComponent,
   TestimonialComponent, UserDashboardComponent, CourseDetailsComponent
@@ -15,9 +14,27 @@ import {
 import { PrismoAdvtgComponent } from './system/prismo-advtg/prismo-advtg.component';
 import { ApplyModelComponent } from './user/apply-model/apply-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AlertComponent } from './alert/alert.component';
-import { LoginComponent } from './login/login.component';
+import { AlertComponent } from './components/alert/alert.component';
+import { LoginComponent } from './components/login/login.component';
 
+
+
+//PrimeNG Module
+import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
+import { SliderModule } from 'primeng/slider';
+import { DialogModule } from 'primeng/dialog';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { InputTextModule } from 'primeng/inputtext';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { DropdownModule } from 'primeng/dropdown';
+
+
+// Interceptor
+import { httpInterceptorProviders } from 'src/app/intercepter'
 
 @NgModule({
   declarations: [
@@ -36,7 +53,9 @@ import { LoginComponent } from './login/login.component';
     PrismoAdvtgComponent,
     ApplyModelComponent,
     AlertComponent,
-    LoginComponent
+    LoginComponent,
+    LeadDetailsComponent,
+    LeadTrackingComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +63,21 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     InputNumberModule,
     HttpClientModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+
+    TableModule,
+    CalendarModule,
+    SliderModule,
+    DialogModule,
+    MultiSelectModule,
+    ContextMenuModule,
+    DropdownModule,
+    ButtonModule,
+    ToastModule,
+    InputTextModule,
+    ProgressBarModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

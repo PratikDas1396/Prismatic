@@ -16,13 +16,13 @@ export class ModelService {
         this.subject.next({ type: 'success', obj: message });
     }
 
-    // error(message: string, keepAfterNavigationChange = false) {
-    //     this.keepAfterNavigationChange = keepAfterNavigationChange;
-    //     this.subject.next({ type: 'error', text: message });
-    //     alert(message);
-    // }
-
     showModal(): Observable<any> {
         return this.subject.asObservable();
     }
+    
+    showLeadTrackingModel(message: any, keepAfterNavigationChange = false) {
+        this.keepAfterNavigationChange = keepAfterNavigationChange;
+        this.subject.next({ type: 'success', obj: message });
+    }
+
 }
