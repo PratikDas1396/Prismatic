@@ -9,15 +9,12 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { HttpClientModule } from '@angular/common/http';
 import {
   CarouselTemplateComponent, HomeTemplateComponent, CoursesComponent, UserBodyComponent,
-  TestimonialComponent, UserDashboardComponent, CourseDetailsComponent
+  TestimonialComponent, UserDashboardComponent, CourseDetailsComponent, InstructorListComponent
 } from './user/user-index';
 import { PrismoAdvtgComponent } from './system/prismo-advtg/prismo-advtg.component';
 import { ApplyModelComponent } from './user/apply-model/apply-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AlertComponent } from './components/alert/alert.component';
-import { LoginComponent } from './components/login/login.component';
-
-
+import { AlertComponent ,LoginComponent } from './_components/index';
 
 //PrimeNG Module
 import { TableModule } from 'primeng/table';
@@ -34,7 +31,7 @@ import { DropdownModule } from 'primeng/dropdown';
 
 
 // Interceptor
-import { httpInterceptorProviders } from 'src/app/intercepter'
+import { httpInterceptorProviders } from 'src/app/intercepter';
 
 @NgModule({
   declarations: [
@@ -55,7 +52,8 @@ import { httpInterceptorProviders } from 'src/app/intercepter'
     AlertComponent,
     LoginComponent,
     LeadDetailsComponent,
-    LeadTrackingComponent
+    LeadTrackingComponent,
+    InstructorListComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +62,6 @@ import { httpInterceptorProviders } from 'src/app/intercepter'
     InputNumberModule,
     HttpClientModule,
     FormsModule, ReactiveFormsModule,
-
     TableModule,
     CalendarModule,
     SliderModule,
