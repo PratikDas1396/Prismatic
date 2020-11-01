@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from '../components/login/login.component';
-import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, PrismoAdvtgComponent, LeadDetailsComponent } from '../system/system-index';
+import { LoginComponent } from '../login/login.component';
+import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, PrismoAdvtgComponent } from '../system/system-index';
 import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
@@ -13,7 +13,7 @@ const appRoutes: Routes = [
       { path: '', component: HomeTemplateComponent },
       { path: 'home', redirectTo: '/' },
       { path: 'courses', component: CoursesComponent },
-      { path: 'courseinfo/:id', component: CourseDetailsComponent },
+      { path: 'courseinfo', component: CourseDetailsComponent },
     ],
   },
   {
@@ -24,10 +24,10 @@ const appRoutes: Routes = [
         path: 'setup', children: [
           { path: 'carousel', component: CarouselMasterComponent },
           { path: 'testimony', component: TestimonyMasterComponent },
-          { path: 'prismoadvtg', component: PrismoAdvtgComponent },
+          { path: 'prismoadvtg', component: PrismoAdvtgComponent }
         ]
-      },
-      { path: 'leads', component: LeadDetailsComponent }
+      }
+      ,
     ]
   },
   { path: 'login', component: LoginComponent },
@@ -36,7 +36,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { enableTracing: false })],
+  imports: [RouterModule.forRoot(appRoutes, { enableTracing: true })],
   exports: [RouterModule]
 })
 

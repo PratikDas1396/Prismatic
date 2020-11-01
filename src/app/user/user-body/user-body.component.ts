@@ -1,5 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { ModelService } from 'src/app/services/index';
 @Component({
   selector: 'app-user-body',
@@ -8,42 +7,7 @@ import { ModelService } from 'src/app/services/index';
 })
 
 
-export class UserBodyComponent implements OnInit, OnDestroy {
-  responsiveOptions;
-
-  constructor(private applyModelService: ModelService, private route: Router) {
-
-    this.responsiveOptions = [
-      {
-        breakpoint: '1024px',
-        numVisible: 3,
-        numScroll: 3
-      },
-      {
-        breakpoint: '768px',
-        numVisible: 2,
-        numScroll: 2
-      },
-      {
-        breakpoint: '560px',
-        numVisible: 1,
-        numScroll: 1
-      }
-    ];
-  }
-
-  ngOnDestroy(): void {
-
-  }
-
-  ngOnInit(): void {
-  }
-
-  callModel(object: any) {
-    this.applyModelService.showApplyModel(object);
-  }
-
-
+export class UserBodyComponent implements OnInit {
 
   CourseList: CoursesDetails[] = [
     {
@@ -98,7 +62,7 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "isAvailable": true
     },
     {
-      "Id": 2,
+      "Id": 1,
       "ImageUrl": "assets/images/DA.jpg",
       "Subtitle": "",
       "Title": "PGP Data Science and Analytics",
@@ -106,7 +70,7 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "isAvailable": true
     },
     {
-      "Id": 3,
+      "Id": 1,
       "ImageUrl": "assets/images/AIML.jpeg",
       "Subtitle": "",
       "Title": "Advance Deep Learning",
@@ -156,18 +120,10 @@ export class UserBodyComponent implements OnInit, OnDestroy {
 
   Cerificates: Courses[] = [
     {
-      "Id": 4,
+      "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "AI Chatbot with IBM whatson",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": true
-    },
-    {
-      "Id": 5,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Predictive analytics with python",
       "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": true
     },
@@ -177,7 +133,7 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "Subtitle": "",
       "Title": "Advance NLA ",
       "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
+      "isAvailable": true
     },
 
     {
@@ -186,7 +142,7 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "Subtitle": "",
       "Title": "Applied Statistics ",
       "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
+      "isAvailable": true
     },
     {
       "Id": 1,
@@ -196,7 +152,14 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "info": "Duration : 3 Months | 6 Months | 9 Months",
       "isAvailable": false
     },
-   
+    {
+      "Id": 1,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "",
+      "Title": "Predictive analytics with python",
+      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "isAvailable": false
+    },
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
@@ -259,14 +222,103 @@ export class UserBodyComponent implements OnInit, OnDestroy {
       "info": ["Introduction to Programming", "What is python", "Basics of Python", "Logical Operators"],
       "isAvailable": false
     }
+    // ,
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Data Science With Python",
+    //   "info": [`Ranked #1 Data Science With Python Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Cloud Computing",
+    //   "info": [`Ranked #1 Cloud Computing Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Software Development",
+    //   "info": [`Ranked #1 Software Development Program in India for future oriented professionals`]
+    // },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Game Development",
+    //   "info": [`Ranked #1 Game Development Program in India for future oriented professionals`]
+    // }
+
   ];
 
-  navigate(obj) {
-    debugger;
-    this.route.navigate([`courseinfo/${obj.Id}`])
+  responsiveOptions;
+
+  constructor(
+    private applyModelService : ModelService
+  ) {
+    // var courses: Courses[] = [];
+    // var coursesdetails: CoursesDetails[] = [];
+    // for (let index = 0; index < 3; index++) {
+    //   let courseObj: Courses = {
+    //     "Id": (index + 1),
+    //     "ImageUrl": 'assets/images/pg'+ (index +1)+'.jpg',
+    //     "Title": `PG Program in ${this.programs[index]}`,
+    //     "Subtitle": '12 Months | Online | Weekend',
+    //     "info": `Ranked #${index} ${this.programs[index]} Program in India for future oriented professionals`,
+    //     "isAvailable" : true
+    //   }
+    //   this.CourseList.push(courseObj);
+    // }
+
+    // for (let index = 1; index <= 4; index++) {
+    //   let s: string[] = []
+    //   for (let j = 1; j < 5; j++) {
+    //     s.push(" Lorem Ipsum data fearuens of Progream " + j)
+    //   }
+
+    //   let coursesdetailObj: CoursesDetails = {
+    //     "Id": index,
+    //     "ImageUrl": 'assets/images/course.jpg',
+    //     "Title": `PG Program in ${this.programs[index]}`,
+    //     "Subtitle": 'Sample Course Subtitle  : ' + index,
+    //     "info": ["Advance Statistics", "Data Mining", "Predictive Modeling"],
+    //   }
+
+    //   this.CoursesDetail.push(coursesdetailObj);
+    // }
+
+    this.responsiveOptions = [
+      {
+        breakpoint: '1024px',
+        numVisible: 3,
+        numScroll: 3
+      },
+      {
+        breakpoint: '768px',
+        numVisible: 2,
+        numScroll: 2
+      },
+      {
+        breakpoint: '560px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ];
+  }
+
+  ngOnInit(): void {
+  }
+
+  callModel(object: any){
+    this.applyModelService.showApplyModel(object);
   }
 
 }
+
+
 
 class Courses {
   Id: number

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AlertService, LeadService, ModelService } from 'src/app/services/index';
-import { CallModel, CallToast, CloseModel } from 'src/assets/js/jquery-functions.js';
+import { CallModel, CloseModel } from 'src/assets/js/jquery-functions.js';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Lead } from 'src/app/models/Lead';
 import { first } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-apply-model',
@@ -11,8 +12,10 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./apply-model.component.css']
 })
 
-export class ApplyModelComponent implements OnInit {
+export class ApplyModelComponent implements OnInit, OnDestroy {
   form: FormGroup = new FormGroup({});
+  modelSubscription: Subscription;
+  data: any = null;
 
   constructor(
     private applyModelService: ModelService,
@@ -27,10 +30,12 @@ export class ApplyModelComponent implements OnInit {
     })
   }
 
-  data: any = null;
+  ngOnDestroy(): void {
+    this.modelSubscription.unsubscribe();
+  }
 
   ngOnInit(): void {
-    this.applyModelService.showModal().subscribe(message => {
+    this.modelSubscription = this.applyModelService.showModal().subscribe(message => {
       this.data = message.obj;
       CallModel("#applyModalCaller");
     });
@@ -64,7 +69,6 @@ export class ApplyModelComponent implements OnInit {
 
   closeModal() {
     this.form.reset()
-    // CloseModel('#closeModal')
   }
 
 }

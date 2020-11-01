@@ -22,7 +22,6 @@ export class AuthenticateService {
     }
 
     login(userid: string, password: string) {
-        debugger;
         return this.http.post(`${environment.apiUrl}/Authentication/authenticate`, { userid, password })
             .pipe(map(data => {
                 return data;
