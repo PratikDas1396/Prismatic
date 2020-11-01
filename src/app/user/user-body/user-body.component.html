@@ -11,13 +11,12 @@
                     <div class="card-body">
                         <h5 class="card-title text-capitalize">{{course.Title}}</h5>
                         <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
-                        <p class="card-text text-secondary" *ngFor="let e of course.info; let i = index">{{i +1}}. {{ e }}</p>
+                        <p class="card-text text-secondary mb-3" *ngFor="let e of course.info; let i = index">{{ e }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="bg-gray my-15 py-10">
         <div class="container">
             <div class="row px-7">
@@ -39,12 +38,19 @@
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">{{course.Title}}</h5>
                             <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
-                            <p class="card-text text-secondary">
+                            <p class="card-text text-secondary small mb-5">
                                 {{ course.info }}
+                            </p>
+                            <p class="card-text text-secondary small mb-5">
+                                Session on : {{ course.Schedule }}
+                            </p>
+                            <p class="card-text text-secondary small mb-5">
+                                Cohorts Starts : {{ course.Starts }}
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" (click)="callModel(course)">Apply </button>
+                            <button class="btn btn-primary p-5 btn-block rounded-0" (click)="callModel(course)">Apply
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -66,12 +72,13 @@
                         <div class="card-body">
                             <h5 class="card-title text-capitalize font-weight-bold">{{course.Title}}</h5>
                             <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
-                            <p class="card-text text-secondary">
+                            <p class="card-text text-secondary small">
                                 {{ course.info }}
                             </p>
+
                         </div>
                         <div class="card-footer bg-white border-0 d-flex justify-content-end">
-                            <button class="btn btn-outline-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active" *ngIf="course.isAvailable">Apply </button>
+                            <button class="btn btn-primary p-5 btn-block rounded-0" [routerLink]="['/courses']" routerLinkActive="active" *ngIf="course.isAvailable">Apply </button>
                             <p class="px-0 font-weight-bold text-primary mb-2 " style="font-size: smaller;" *ngIf="!course.isAvailable">Coming Soon... </p>
                         </div>
                     </div>
@@ -198,3 +205,5 @@
         </div>
     </div>
 </div>
+
+<!-- <app-instructor-list></app-instructor-list> -->

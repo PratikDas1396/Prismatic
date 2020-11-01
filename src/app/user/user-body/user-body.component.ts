@@ -52,29 +52,35 @@ export class UserBodyComponent implements OnInit {
     "Data Science", "Cloud Computing", "Machine Learning"
   ]
 
-  HigherEducation: Courses[] = [
+  HigherEducation: any[] = [
     {
       "Id": 1,
       "ImageUrl": "assets/images/AI&ML.jpg",
-      "Subtitle": "",
+      "Subtitle": "Get ready for tomorrow with a comprehensive course in Artificial Intelligence and Machine Learning.",
       "Title": "PGP AI ML",
       "info": "Duration : 12 Months | Fully Online",
+      "Schedule": "Weekends",
+      "Starts": "1st December",
       "isAvailable": true
     },
     {
-      "Id": 1,
+      "Id": 2,
       "ImageUrl": "assets/images/DA.jpg",
-      "Subtitle": "",
+      "Subtitle": "Master Big Data and analytics with this cutting edge curriculum on Data Science.",
       "Title": "PGP Data Science and Analytics",
       "info": "Duration : 12 Months | Fully Online",
+      "Schedule": "Weekends",
+      "Starts": "1st December",
       "isAvailable": true
     },
     {
-      "Id": 1,
+      "Id": 3,
       "ImageUrl": "assets/images/AIML.jpeg",
-      "Subtitle": "",
+      "Subtitle": "Take a deep dive into Deep Learning, and master one of the most sought after skills today.",
       "Title": "Advance Deep Learning",
       "info": "Duration : 12 Months | Fully Online",
+      "Schedule": "Weekends",
+      "Starts": "1st December",
       "isAvailable": true
     }
 
@@ -117,14 +123,25 @@ export class UserBodyComponent implements OnInit {
 
   ]
 
-
-  Cerificates: Courses[] = [
+  Cerificates: any[] = [
     {
-      "Id": 1,
+      "Id": 4,
       "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
+      "Subtitle": "Build a predictive model from the ground up, using Python.",
       "Title": "AI Chatbot with IBM whatson",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
+      "Schedule": "Weekends",
+      "CohortStarts": "1st December",
+      "isAvailable": true
+    },
+    {
+      "Id": 5,
+      "ImageUrl": "assets/images/course.jpg",
+      "Subtitle": "Build an AI powered chatbot that delights your users!",
+      "Title": "Predictive analytics with python",
+      "info": "Duration : 3 Months ",
+      "Schedule": "Weekends",
+      "CohortStarts": "1st December",
       "isAvailable": true
     },
     {
@@ -132,8 +149,8 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Advance NLA ",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": true
+      "info": "Duration : 3 Months ",
+      "isAvailable": false
     },
 
     {
@@ -141,31 +158,24 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Applied Statistics ",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": true
+      "info": "Duration : 3 Months ",
+      "isAvailable": false
     },
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Learn 6 Sigma",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
       "isAvailable": false
     },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Predictive analytics with python",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
-      "isAvailable": false
-    },
+  
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Data Mining and Business Analytics with R",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
       "isAvailable": false
     },
 
@@ -174,7 +184,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "AI Stratergy For Leaders ",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
       "isAvailable": false
     },
     {
@@ -182,7 +192,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Advance Computer Vision ",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
       "isAvailable": false
     },
     {
@@ -190,7 +200,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "",
       "Title": "Business Forecasting with R ",
-      "info": "Duration : 3 Months | 6 Months | 9 Months",
+      "info": "Duration : 3 Months ",
       "isAvailable": false
     },
 
@@ -257,7 +267,7 @@ export class UserBodyComponent implements OnInit {
   responsiveOptions;
 
   constructor(
-    private applyModelService : ModelService
+    private applyModelService: ModelService
   ) {
     // var courses: Courses[] = [];
     // var coursesdetails: CoursesDetails[] = [];
@@ -312,7 +322,7 @@ export class UserBodyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  callModel(object: any){
+  callModel(object: any) {
     this.applyModelService.showApplyModel(object);
   }
 
