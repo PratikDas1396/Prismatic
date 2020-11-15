@@ -4,15 +4,25 @@
         <div class="text-center py-md-10 py-sm-2">
             <h1>The Prismo Advantage</h1>
         </div>
-        <div class="row courselist ">
+        <div class="row courselist advrow">
             <div class="col-sm-12 col-md-6 col-lg-4 mt-10" *ngFor="let course of CourseList">
                 <div class="card course cursor-pointer h-100" attr.data-view="Programs{{ course.Id }}">
                     <img src="{{course.ImageUrl}}" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title text-capitalize">{{course.Title}}</h5>
+                        <h4 class="card-title text-capitalize">{{course.Title}}</h4>
                         <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
-                        <p class="card-text text-secondary mb-3" *ngFor="let e of course.info; let i = index">{{ e }}</p>
+                        <p class="card-text text-secondary mb-3" *ngFor="let e of course.info; let i = index">
+                            <img src="assets/images/LIST/right-arrow.png" style="width: 24px; height: 24px;" class="img-fluid" />
+                            {{ e }}
+                        </p>
                     </div>
+
+                    <!-- <div class="col-sm-6 mb-5 d-flex" *ngFor="let item of Course.CourseIncluds; let i=index">
+                        <div class="mr-6">
+                            <img src="assets/images/courseinclude/{{i + 1}}.png" style="width: 24px; height: 24px;" class="img-fluid" />
+                        </div>
+                        {{ item }}
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -36,20 +46,23 @@
                     <div class="card shadow-sm cursor-pointer h-100">
                         <img src="{{course.ImageUrl}}" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title font-weight-bold">{{course.Title}}</h5>
+                            <h5 class="card-title font-weight-bold">{{course.Title}}    </h5>
                             <!-- <h5 class="card-text -secondary">{{course.Subtitle}}</h5> -->
                             <p class="card-text text-secondary small mb-5">
-                                {{ course.info }}
+                                <b style="color: green;"> Duration </b> :{{ course.Duration }}
                             </p>
                             <p class="card-text text-secondary small mb-5">
-                                Session on : {{ course.Schedule }}
+                                <b style="color: green;"> Session on</b> : {{ course.Schedule }}
                             </p>
                             <p class="card-text text-secondary small mb-5">
-                                Cohorts Starts : {{ course.Starts }}
+                                <b style="color: green;">Cohorts Starts</b> : {{ course.Starts }}
+                            </p>
+                            <p class="card-text text-secondary small mb-5">
+                                 {{ course.Subtitle }}
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-primary p-5 btn-block rounded-0" (click)="callModel(course)">Apply
+                            <button class="btn btn-primary p-5 btn-block rounded-0" (click)="callModel(course)">Know More
                             </button>
                         </div>
                     </div>
@@ -59,7 +72,7 @@
         <hr />
         <div class="container my-15 ">
             <div class="row px-7">
-                <h3 class="font-weight-bold"> Prefessional Programs</h3>
+                <h3 class="font-weight-bold"> Professional Programs</h3>
             </div>
             <div class="row px-7">
                 <h6>Achieve your career goals with industry-recognized learning paths
@@ -107,7 +120,7 @@
                                 </p>
                             </div>
                             <div class="d-flex justify-content-start">
-                                <button class="btn btn-link px-0 font-weight-bold" *ngIf="course.isAvailable">
+                                <button class="btn btn-link px-0 font-weight-bold" *ngIf="course.isAvailable" (click)="callModel(course)">
                                     Get Certified
                                 </button>
                                 <p class="px-0 font-weight-bold text-primary mb-2 " *ngIf="!course.isAvailable">Coming Soon... </p>

@@ -7,6 +7,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { UserBodyComponent } from './user-body/user-body.component'
 import { CourseDetailsComponent } from './course-details/course-details.component'
 import { InstructorListComponent } from './instructor-list/instructor-list.component'
+import { ApplyPaymentPageComponent } from './apply-payment-page/apply-payment-page.component'
 export {
     CarouselTemplateComponent,
     CoursesComponent,
@@ -16,5 +17,6 @@ export {
     UserDashboardComponent,
     UserBodyComponent,
     CourseDetailsComponent,
-    InstructorListComponent
+    InstructorListComponent,
+    ApplyPaymentPageComponent
 }

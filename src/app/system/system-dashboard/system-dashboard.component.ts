@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthenticateService } from 'src/app/services';
 declare var $: any;
+declare var AdminDashboardPageLoad: any
+declare var MenuSetup: any
 @Component({
   selector: 'app-system-dashboard',
   templateUrl: './system-dashboard.component.html',
@@ -22,6 +24,8 @@ export class SystemDashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    MenuSetup();
+    AdminDashboardPageLoad();
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');

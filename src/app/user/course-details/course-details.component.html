@@ -1,160 +1,302 @@
-<div class="bg-dark">
-    <div class="card course-info text-white">
-        <img src="assets/images/img1.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay course-intro">
-            <h1 class="text-white">
-                Post Graduation Program - Data Science with Python
-            </h1>
-            <h5 class="card-subtitle font-weight-normal mb-10">
-                Learn Python like a Professional! Start from the basics and go all the way to creating your own applications and games!
-            </h5>
-            <div class="d-flex justify-content-start">
-                <h4><span class="badge badge-warning ml-0">Begineer</span></h4>
-                <h4><span class="badge badge-warning">Python</span></h4>
-                <h4><span class="badge badge-warning">Course</span></h4>
-            </div>
-            <p class="card-title text-light">
+<div *ngIf="Course">
+    <div class="bg-dark">
+        <div class="card course-info text-white">
+            <img src="{{Course.ImageUrl}}" class="card-img" alt="...">
+            <div class="card-img-overlay course-intro">
+                <h1 class="text-white">
+                    {{ Course.Name }}
+                </h1>
+                <br/>
+                
+                <h5 class="card-subtitle font-weight-normal mb-10">
+                    {{ Course.TagLine }}
+                </h5>
+                <br/>
+                <div class="d-flex justify-content-start">
+                    <h4><span class="badge badge-warning ml-0" *ngFor="let item of Course.Keywords">{{item}}</span></h4>
+                </div>
+                <!-- <p class="card-title text-light">
                 10234 Students Applied
-            </p>
+            </p> -->
+            </div>
         </div>
     </div>
-</div>
-
-<div class="container my-10">
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="jumbotron py-13">
-                <h2 class="font-weight-bold">What you'll learn </h2>
-                <ul class="list-reset">
+    <div class="container prog-highlights">
+        <div class="row my-15">
+            <h1 class="mx-auto">
+                Why Prismo.ai
+            </h1>
+        </div>
+        <div class="d-flex justify-content-center mb-15 grid">
+            <div class="card color-1 highlight-wrapper border-0">
+                <h5 class="mb-10 ">Complete Learning</h5>
+                <ul>
                     <li>
-                        Learn to use Python professionally, learning both Python 2 and Python 3!
+                        <span></span>
+                        <div>Cutting-edge in-depth curriculum</div>
                     </li>
                     <li>
-                        Create games with Python, like Tic Tac Toe and Blackjack!
+                        <span></span>
+                        <div> Courses personalized to your needs</div>
                     </li>
                     <li>
-                        Learn advanced Python features, like the collections module and how to work with timestamps!
-                    </li>
-                    <li>
-                        Learn to use Object Oriented Programming with classes!
-                    </li>
-                    <li>
-                        Understand complex topics, like decorators.
-                    </li>
-                    <li>
-                        Understand how to use both the Jupyter Notebook and create .py files
+                        <span></span>
+                        <div> Online access to study and practice labs</div>
                     </li>
                 </ul>
             </div>
-
-            <div class="card border-0">
-                <div class="card-body px-0">
-                    <h3 class="font-weight-bold">Course Content</h3>
-                    <hr />
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Chapter 1
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Chapter 2
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block font-weight-bold text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Chapter 3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                    craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="card color-2 highlight-wrapper border-0">
+                <h5 class="mb-10 ">Full Mentoring</h5>
+                <ul>
+                    <li>
+                        <span></span>
+                        <div>
+                            One-on-one mentoring</div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div> Flexible mentoring sessions and Q&A</div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <div> Industry case studies & projects</div>
+                    </li>
+                </ul>
             </div>
-            <div class="card border-0">
-                <div class="card-body px-0">
-                    <h3 class="font-weight-bold">Instructor</h3>
-                    <hr />
+            <div class="card color-3 highlight-wrapper border-0">
+                <h5 class="mb-10 ">Career Guidance</h5>
+                <ul>
+                    <li>
+                        <span></span>
+                        <div>Develop job-ready skills</div>
+                    </li>
+                    <li>
+                        <span></span>
 
-                    <div class="media">
-                        <!-- <img src="assets/images/avatar-3.jpg" class="mr-3 rounded-circle" alt=""> -->
-                        <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 64x64"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
-                        <div class="media-body">
-                            <h4 class="mt-1 mb-0 ml-7">Pratik Das</h4>
-                            <p class="ml-7">Head of Data Science, Pierian Data Inc.</p>
+                        <div> Personal career support and counselling</div>
+                    </li>
+                    <li>
+                        <span></span>
+
+                        <div> Job recommendations</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    <div class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="p-13">
+                        <h2 class="mb-10">This Course Includes </h2>
+                        <hr>    
+                        <div class="row">
+                            <div class="col-sm-6 mb-5 d-flex" *ngFor="let item of Course.CourseIncluds; let i=index">
+                                <div class="mr-6">
+                                    <img src="assets/images/courseinclude/{{i + 1}}.png" style="width: 24px; height: 24px;" class="img-fluid" />
+                                </div>
+                                {{ item }}
+                            </div>
+                            
                         </div>
-
-                    </div>
-                    <div class="mt-5">
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <div class="row">
+                            <div class="col-sm-3 mb-5 d-flex" ></div>
+                            <div class="col-sm-3 mb-5 d-flex" >
+                                <a class="btn p-7 btn-success rounded-3 btn-block" (click)='callModal()'>Apply Now
+                                   
+                                </a>
+                            </div>
+                            <div class="col-sm-3 mb-5 d-flex" >
+                                <button class="btn p-7 btn-warning rounded-3 btn-block" >Download Brochure</button>
+                            </div>
+                            <div class="col-sm-3 mb-5 d-flex" ></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 p-0">
-            <div class="jumbotron py-13">
-                <div class="incentives--incentives-container--CUQ8q">
-                    <h4 class="font-weight-bold">This course includes: </h4>
-                    <ul class="unstyled-list udlite-block-list">
-                        <li class="mb-3">
-                            <i class="fa fa-television mr-5" aria-hidden="true"></i> 21.5 hours on-demand video
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa fa-file-text-o mr-5" aria-hidden="true"></i> 14 articles
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa fa-code mr-5" aria-hidden="true"></i> 14 articles 19 coding exercises
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa fa-universal-access mr-5" aria-hidden="true"></i> Full lifetime access
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa fa-mobile-phone mr-5" aria-hidden="true"></i> Access on mobile and TV
-                        </li>
-                        <li class="mb-3">
-                            <i class="fa fa-certificate mr-5" aria-hidden="true"></i> Certificate of completion
+    </div>
+    <div class="container py-10">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron py-13">
+                    <h2 class="">What you'll learn </h2>
+                    <ul class="list-reset">
+                        <li *ngFor="let item of Course.WhatToLearn">
+                            {{ item }}
                         </li>
                     </ul>
                 </div>
 
-                <button class="btn p-7 btn-primary rounded-0 btn-block"> Apply </button>
-                <button class="btn p-7 btn-success rounded-0 btn-block"> Download Broucher </button>
+                <div class="card border-0">
+                    <div class="card-body px-0">
+                        <h3 class="">Course Content</h3>
+                        <hr />
+                        <div class="accordion" id="accordionExample">
+                            <div class="card" *ngFor="let item of Course.Modules">
+                                <div class="card-header" id="heading{{item.RecID}}">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block  text-left" type="button"
+                                            data-toggle="collapse" attr.data-target="#collapse{{item.RecID}}"
+                                            attr.aria-expanded="true" attr.aria-controls="collapse{{item.RecID}}">
+                                            Module {{ item.RecID }} : {{ item.ModuleName }}
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapse{{item.RecID}}" class="collapse"
+                                    attr.aria-labelledby="heading{{item.RecID}}" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ol>
+                                            <li *ngFor="let topic of item.Topics">
+                                                {{ topic }}
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 d-none">
+                    <div class="card-body px-0">
+                        <h3 class="">Instructor</h3>
+                        <hr />
+
+                        <div class="media">
+                            <!-- <img src="assets/images/avatar-3.jpg" class="mr-3 rounded-circle" alt=""> -->
+                            <svg class="bd-placeholder-img mr-3" width="64" height="64"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: 64x64">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%"
+                                    fill="#dee2e6" dy=".3em"></text>
+                            </svg>
+                            <div class="media-body">
+                                <h4 class="mt-1 mb-0 ml-7">Pratik Das</h4>
+                                <p class="ml-7">Head of Data Science, Pierian Data Inc.</p>
+                            </div>
+
+                        </div>
+                        <div class="mt-5">
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
+                            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="col-sm-4 p-0">
+                <div class="jumbotron py-13">
+                    <div class="incentives--incentives-container--CUQ8q">
+                        <form [formGroup]="form">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" formControlName="Name">
+                                <div *ngIf="f.Name.touched && f.Name.invalid" class="m-2">
+                                    <p *ngIf="f.Name.errors.required" class="text-danger">Name is Required.</p>
+                                    <p *ngIf="f.Name.errors.pattern" class="text-danger">Enter valid Name.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" formControlName="Email">
+                                <div *ngIf="f.Email.touched && f.Email.invalid" class="m-2">
+                                    <p *ngIf="f.Email.errors.required" class="text-danger">Email is required.</p>
+                                    <p *ngIf="f.Email.errors.pattern" class="text-danger">Enter valid email address.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Contact Number</label>
+                                <input type="text" class="form-control" formControlName="phoneNo">
+                                <div *ngIf="f.phoneNo.touched && f.phoneNo.invalid" class="m-2">
+                                    <p *ngIf="f.phoneNo.errors.required" class="text-danger">Contact Number is required.
+                                    </p>
+                                    <p *ngIf="f.phoneNo.errors.pattern" class="text-danger">Input should be numberic and
+                                        length should be 10.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- <h4 class="">This course includes: </h4>
+                        <ul class="unstyled-list udlite-block-list">
+                            <li class="mb-3">
+                                <i class="fa fa-television mr-5" aria-hidden="true"></i> {{ Course.Duration }}
+                            </li>
+                            <li class="mb-3">
+                                <i class="fa fa-file-text-o mr-5" aria-hidden="true"></i> {{ Course.Modules.length }}
+                                Modules
+                            </li>
+                            <li class="mb-3">
+                                <i class="fa fa-universal-access mr-5" aria-hidden="true"></i> Full lifetime access
+                            </li>
+                            <li class="mb-3">
+                                <i class="fa fa-mobile-phone mr-5" aria-hidden="true"></i> {{ Course.ModeOfDelivery }}
+                            </li>
+                            <li class="mb-3">
+                                <i class="fa fa-play mr-5" aria-hidden="true"></i> Starts on : {{ Course.Starts }}
+                            </li>
+                        </ul> -->
+                    </div>
 
-
+                    <button class="btn p-7 btn-primary rounded-0 btn-block" (click)="submit()"> Get in touch </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card border-0">
+                    <div class="card-body px-0">
+                        <h3 class="">Languages and Tools covered</h3>
+                        <hr />
+                        <img src="{{Course.ToolsAndLanguage}}" class="card-img" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card border-0">
+                    <div class="card-body px-0">
+                        <h3 class="">Instructors</h3>
+                        <hr />
+                        <div class="media">
+                            <img class="d-flex mr-3" src="assets/images/Instructors/Picture1.png" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h3 class="card-title">Dr. P. R. Lakshmikantan</h3>
+                                <h5>Ex. Director SQC – OR, ISI Delhi</h5>
+                                <p class="card-text">Dr. P. R. Lakshmikantan (Ph.D.) was formerly the Director of Statistical Quality Control and Operations Research, ISI Delhi where he headed and coordinated research activities and Industry Consultancy. He has also held the position of visiting faculty in the school of Planning and Architecture, Delhi. In his 40 years of experience, he has held numerous Mentorship and Consultant positions in the field of applied statistics and operations research in the industry, including Residential Consultant at Bharat Heavy Electricals, Airtel, Standard Chartered Bank in Chennai, Dubai and Hong Kong, HMT Group, Lee Associates Ltd, Samtel group of industries and 6 Sigma Consultant in GE International -  to name a few. He is currently a Faculty in UPES, Dehradun.
+                                </p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="media">
+                            
+                            <div class="media-body">
+                                <h3 class="card-title">Mr. Somen Chaudhuri</h3>
+                                <h5>ISI, IIIT – H, IIT - Chennai</h5>
+                                <p class="card-text">Mr. Somen Chowdhury (MBB - ISI) has over 15 years of experience as a Digital Transformation Leader, Statistical Machine Learning, Deep Learning, Data Science and Analytics expert, certified 6 Sigma Expert (ISI) and accredited Artificial Intelligence trainer. He is a Post Graduate Fellow in IIIT - Hyderabad (CSE). His areas of expertise includes Applied Statistics, Programming and Machine Learning algorithms, Deep Learning, Advanced Computer Vision, NLP, AI Chatbots, Voicebots etc. He has held numerous consulting and mentorship positions as Digital Strategy and Artificial Intelligence expert in the industry, including Consultancy at Airtel, Colt, TATA, GECIS to name a few. He is currently a Faculty at Great Learning Institute of Technology.
+                                </p>
+                            </div>
+                            <img class="d-flex mr-3" src="assets/images/Instructors/Picture3.jpg" alt="Generic placeholder image">
+                        </div>
+                        <hr />
+                        <div class="media">
+                            <img class="d-flex mr-3" src="assets/images/Instructors/Picture2.png" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h3 class="card-title">Dr. P. R. Lakshmikantan</h3>
+                                <h5>Ex. Director SQC – OR, ISI Delhi</h5>
+                                <p class="card-text">Dr. P. R. Lakshmikantan (Ph.D.) was formerly the Director of Statistical Quality Control and Operations Research, ISI Delhi where he headed and coordinated research activities and Industry Consultancy. He has also held the position of visiting faculty in the school of Planning and Architecture, Delhi. In his 40 years of experience, he has held numerous Mentorship and Consultant positions in the field of applied statistics and operations research in the industry, including Residential Consultant at Bharat Heavy Electricals, Airtel, Standard Chartered Bank in Chennai, Dubai and Hong Kong, HMT Group, Lee Associates Ltd, Samtel group of industries and 6 Sigma Consultant in GE International -  to name a few. He is currently a Faculty in UPES, Dehradun.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

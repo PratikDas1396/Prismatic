@@ -9,7 +9,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { HttpClientModule } from '@angular/common/http';
 import {
   CarouselTemplateComponent, HomeTemplateComponent, CoursesComponent, UserBodyComponent,
-  TestimonialComponent, UserDashboardComponent, CourseDetailsComponent, InstructorListComponent
+  TestimonialComponent, UserDashboardComponent, CourseDetailsComponent, InstructorListComponent,
+  ApplyPaymentPageComponent
 } from './user/user-index';
 import { PrismoAdvtgComponent } from './system/prismo-advtg/prismo-advtg.component';
 import { ApplyModelComponent } from './user/apply-model/apply-model.component';
@@ -53,7 +54,8 @@ import { httpInterceptorProviders } from 'src/app/intercepter';
     LoginComponent,
     LeadDetailsComponent,
     LeadTrackingComponent,
-    InstructorListComponent
+    InstructorListComponent,
+    ApplyPaymentPageComponent
   ],
   imports: [
     BrowserModule,

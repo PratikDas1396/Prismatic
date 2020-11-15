@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from '../_components/index';
 import { SystemDashboardComponent, CarouselMasterComponent, TestimonyMasterComponent, PrismoAdvtgComponent } from '../system/system-index';
-import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent } from '../user/user-index';
+import { UserDashboardComponent, HomeTemplateComponent, CoursesComponent, CourseDetailsComponent, ApplyPaymentPageComponent } from '../user/user-index';
 
 const appRoutes: Routes = [
 
@@ -13,7 +13,9 @@ const appRoutes: Routes = [
       { path: '', component: HomeTemplateComponent },
       { path: 'home', redirectTo: '/' },
       { path: 'courses', component: CoursesComponent },
-      { path: 'courseinfo', component: CourseDetailsComponent },
+      // { path: 'courseinfo', component: CourseDetailsComponent },
+      { path: 'courseinfo/:id', component: CourseDetailsComponent },
+      { path: 'registration', component: ApplyPaymentPageComponent },
     ],
   },
   {

@@ -3,6 +3,13 @@
    
    } */
 
+.advrow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -40px;
+    margin-left: -15px;
+}
+
 .card-fliper .front-end {
     display: inline-block;
     width: 100%;
