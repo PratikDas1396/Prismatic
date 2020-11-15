@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModelService } from 'src/app/services/index';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-body',
   templateUrl: './user-body.component.html',
@@ -58,7 +59,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/AI&ML.jpg",
       "Subtitle": "Get ready for tomorrow with a comprehensive course in Artificial Intelligence and Machine Learning.",
       "Title": "PGP AI ML",
-      "info": "Duration : 12 Months | Fully Online",
+      "Duration": "12 Months | Fully Online",
       "Schedule": "Weekends",
       "Starts": "1st December",
       "isAvailable": true
@@ -68,7 +69,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/DA.jpg",
       "Subtitle": "Master Big Data and analytics with this cutting edge curriculum on Data Science.",
       "Title": "PGP Data Science and Analytics",
-      "info": "Duration : 12 Months | Fully Online",
+      "Duration": "12 Months | Fully Online",
       "Schedule": "Weekends",
       "Starts": "1st December",
       "isAvailable": true
@@ -78,7 +79,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/AIML.jpeg",
       "Subtitle": "Take a deep dive into Deep Learning, and master one of the most sought after skills today.",
       "Title": "Advance Deep Learning",
-      "info": "Duration : 12 Months | Fully Online",
+      "Duration": "4 Months | Fully Online",
       "Schedule": "Weekends",
       "Starts": "1st December",
       "isAvailable": true
@@ -92,8 +93,8 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/dswpp.jpg",
       "Subtitle": "",
       "Title": "Data Science With Python",
-      "info": "Duration : 6 Months | Online",
-      "isAvailable": true
+      "info": "Duration : 4 Months | Online",
+      "isAvailable": false
     },
 
     {
@@ -101,15 +102,15 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/se.jpg",
       "Subtitle": "",
       "Title": "Software Engineering",
-      "info": "Duration : 6 Months | Online",
-      "isAvailable": true
+      "info": "Duration : 4 Months | Online",
+      "isAvailable": false
     },
     {
       "Id": 1,
       "ImageUrl": "assets/images/pwb.jpg",
       "Subtitle": "",
       "Title": "Full Stack Web Development Python ",
-      "info": "Duration : 6 Months | Online",
+      "info": "Duration : 4 Months | Online",
       "isAvailable": false
     },
     {
@@ -117,7 +118,7 @@ export class UserBodyComponent implements OnInit {
       "ImageUrl": "assets/images/cc.jpg",
       "Subtitle": "",
       "Title": "Cloud Computing",
-      "info": "Duration : 6 Months | Online",
+      "info": "Duration : 4 Months | Online",
       "isAvailable": false
     }
 
@@ -128,7 +129,7 @@ export class UserBodyComponent implements OnInit {
       "Id": 4,
       "ImageUrl": "assets/images/course.jpg",
       "Subtitle": "Build a predictive model from the ground up, using Python.",
-      "Title": "AI Chatbot with IBM whatson",
+      "Title": "AI Chatbot with IBM watson",
       "info": "Duration : 3 Months ",
       "Schedule": "Weekends",
       "CohortStarts": "1st December",
@@ -144,14 +145,14 @@ export class UserBodyComponent implements OnInit {
       "CohortStarts": "1st December",
       "isAvailable": true
     },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Advance NLA ",
-      "info": "Duration : 3 Months ",
-      "isAvailable": false
-    },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Advance NLA ",
+    //   "info": "Duration : 3 Months ",
+    //   "isAvailable": false
+    // },
 
     {
       "Id": 1,
@@ -170,14 +171,14 @@ export class UserBodyComponent implements OnInit {
       "isAvailable": false
     },
   
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Data Mining and Business Analytics with R",
-      "info": "Duration : 3 Months ",
-      "isAvailable": false
-    },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Data Mining and Business Analytics with R",
+    //   "info": "Duration : 3 Months ",
+    //   "isAvailable": false
+    // },
 
     {
       "Id": 1,
@@ -187,14 +188,14 @@ export class UserBodyComponent implements OnInit {
       "info": "Duration : 3 Months ",
       "isAvailable": false
     },
-    {
-      "Id": 1,
-      "ImageUrl": "assets/images/course.jpg",
-      "Subtitle": "",
-      "Title": "Advance Computer Vision ",
-      "info": "Duration : 3 Months ",
-      "isAvailable": false
-    },
+    // {
+    //   "Id": 1,
+    //   "ImageUrl": "assets/images/course.jpg",
+    //   "Subtitle": "",
+    //   "Title": "Advance Computer Vision ",
+    //   "info": "Duration : 3 Months ",
+    //   "isAvailable": false
+    // },
     {
       "Id": 1,
       "ImageUrl": "assets/images/course.jpg",
@@ -267,7 +268,7 @@ export class UserBodyComponent implements OnInit {
   responsiveOptions;
 
   constructor(
-    private applyModelService: ModelService
+    private route: Router
   ) {
     // var courses: Courses[] = [];
     // var coursesdetails: CoursesDetails[] = [];
@@ -322,8 +323,9 @@ export class UserBodyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  callModel(object: any) {
-    this.applyModelService.showApplyModel(object);
+  callModel(obj) {
+    //this.applyModelService.showApplyModel(object);
+    this.route.navigate([`courseinfo/${obj.Id}`])
   }
 
 }

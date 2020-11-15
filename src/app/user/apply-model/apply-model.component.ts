@@ -36,6 +36,7 @@ export class ApplyModelComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.modelSubscription = this.applyModelService.showModal().subscribe(message => {
+      debugger;
       this.data = message.obj;
       CallModel("#applyModalCaller");
     });
@@ -69,6 +70,10 @@ export class ApplyModelComponent implements OnInit, OnDestroy {
 
   closeModal() {
     this.form.reset()
+  }
+
+  openModel(){
+    
   }
 
 }

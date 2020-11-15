@@ -12,6 +12,7 @@ export class ModelService {
     }
 
     showApplyModel(message: any, keepAfterNavigationChange = false) {
+        debugger;
         this.keepAfterNavigationChange = keepAfterNavigationChange;
         this.subject.next({ type: 'success', obj: message });
     }
