@@ -1,0 +1,1081 @@
+{
+    "courses": [
+        {
+            "CourseID": 1,
+            "ImageUrl": "assets/images/CourseAIML.jpg",
+            "Name": "PGP - Artificial Intelligence and Machine Learning",
+            "Duration": "12 Months",
+            "ModeOfDelivery": "Fully Online",
+            "BatchSchedule": "Weekends",
+            "Starts": "1st December",
+            "ToolsAndLanguage": "assets/images/ToolsAndLanguages/aiml.jpg",
+            "TagLine": "Get ready for tomorrow with a comprehensive course in Artificial Intelligence and Machine Learning.",
+            "Description": "Get ready for tomorrow with a comprehensive course in Artificial Intelligence and Machine Learning. An in-depth, all inclusive curriculum designed by top industry experts, personaized course content, hands on case studies and projects - all delivered through live, engaging mentoring sessions will help you transform your career and start your career journey in AI.        ",
+            "EligibilityCriteria": "None. If you are passionate about learning Artificial Intelligence and Machine Learning and you want to get into the field of AI, you can enroll in this program.",
+            "Keywords": [
+                "AI",
+                "Machine Learning",
+                "Deep Learning",
+                "Python"
+            ],
+            "CourseIncluds": [
+                "12-month Program",
+                "Personalized course curriculum",
+                "Live and engaging online mentoring sessions",
+                "Individual doubt-resolution with expert mentors, quiz and more",
+                "150+ hours of online learning content",
+                "12+ hands on practical case studies guided by industry experts",
+                "5 Industry projects including a capstone project",
+                "Professional Certificate on completion",
+                "1:1 career guidance, resume writing and interview preparation"
+            ],
+            "WhatToLearn": [
+                "What is Machine Learning?",
+                "The main steps in a typical Machine Learning project.",
+                "Handling, cleaning, and preparing data.",
+                "Selecting and engineering features.",
+                "Selecting a model and tuning hyperparameters using cross-validation.",
+                "The main challenges of Machine Learning, in particular underfitting and overfitting (the bias/variance tradeoff).",
+                "The most common learning algorithms: Linear and Polynomial Regression",
+                "Logistic Regression, k-Nearest Neighbors, Support Vector Machines, Decision Trees, Random Forests, and Ensemble methods.",
+                "Reducing the dimensionality of the training data to fight the curse of dimensionality.",
+                "Other unsupervised learning techniques, including clustering, density estimation and anomaly detection.",
+                "Neural Network: Fundamentals",
+                "Building and training neural nets using TensorFlow and Keras.",
+                "The most important neural net architectures: feedforward neural nets, convolutional nets, recurrent nets, long short-term memory (LSTM) nets, autoencoders and generative adversarial networks (GANs).",
+                "Techniques for training deep neural nets.",
+                "Scaling neural networks for large datasets.",
+                "Computer Vision",
+                "Natural Language Processing",
+                "Learning strategies with Reinforcement Learning.",
+                "Handling uncertainty with Bayesian Deep Learning"
+            ],
+            "Modules": [
+                {
+                    "RecID": 1,
+                    "ModuleName": "Python Programming Fundamental",
+                    "Topics": [
+                        "Anaconda and Jupyter notebook – Installation & function",
+                        "Google Colab and Git basics",
+                        "Python fundamentals I: Data structures, functions, files, packages and routines",
+                        "Python fundamentals II: OOP with Python",
+                        "Numpy I: Arrays and Vectorized computation",
+                        "Numpy II: Array manipulation, Broadcasting and Sorting",
+                        "Pandas I: Introduction to pandas data structures: Series and Dataframes",
+                        "Pandas II: Data Preparation, Join, Combine, Reshape",
+                        "Pandas III: Data Aggregation and Group Operations"
+                    ]
+                },
+                {
+                    "RecID": 2,
+                    "ModuleName": "Statistical Methods for Artificial Intelligence",
+                    "Topics": [
+                        "Descriptive Statistics",
+                        "Inferential Statistics",
+                        "Probability & Conditional Probability",
+                        "Probability Distributions - Types of distribution – Binomial, Poisson & Normal distribution",
+                        "Central Limit Theorem",
+                        "Hypothesis Testing"
+                    ]
+                },
+                {
+                    "RecID": 3,
+                    "ModuleName": "EDA and Data Visualization",
+                    "Topics": [
+                        "Introduction to EDA",
+                        "Data Visualization with Matploptlib and Seaborn",
+                        "Data Cleaning and Preparation",
+                        "Feature Scaling and Standardization",
+                        "Univariate Analysis",
+                        "Multivariate Analysis and Correlation study",
+                        "Case Study: EDA: COVID Spread",
+                        "Assignment: US Car Price Visualization"
+                    ]
+                },
+                {
+                    "RecID": 4,
+                    "ModuleName": "Supervised Learning: Linear Regression",
+                    "Topics": [
+                        "What is Machine Learning?",
+                        "Difference between the Statistical and ML Approaches",
+                        "Getting Started with Regression: Linear Regression",
+                        "Gradient Descent",
+                        "Multiple Linear Regression",
+                        "Polynomial Regression",
+                        "Learning Curves",
+                        "Ridge Regression",
+                        "Lasso Regression",
+                        "Elastic Net",
+                        "Early Stopping",
+                        "Comparison of Regressors: RMSE",
+                        "R^2 and Residual Plots",
+                        "Errors and cost functions: Loss, cost and score",
+                        "Overfitting and Underfitting",
+                        "Bias and Variance",
+                        "Re-sampling and Cross Validation",
+                        "Case Study: Real Estate Price Prediction",
+                        "Assignment: Boston House Price Prediction"
+                    ]
+                },
+                {
+                    "RecID": 5,
+                    "ModuleName": "Logistic Regression",
+                    "Topics": [
+                        "Getting Started with Classification: Logistic Regression",
+                        "Estimating Probabilities",
+                        "Training and cost function",
+                        "Decision Boundaries",
+                        "Softmax Regression",
+                        "Evaluating Classifiers: Metrics",
+                        "ROC Curves",
+                        "AUC: Area under the Curve",
+                        "Precision -  Recall Curve"
+                    ]
+                },
+                {
+                    "RecID": 6,
+                    "ModuleName": "More Classifiers: kNN and Naïve Bayes",
+                    "Topics": [
+                        "k Nearest Neighbors Algorithm",
+                        "Probability and Naïve Bayes",
+                        "Evaluating Multiple Classifiers",
+                        "Case Study: 20 Newsgroup text classification",
+                        "Assignment: Predicting Parkinson's Disease"
+                    ]
+                },
+                {
+                    "RecID": 7,
+                    "ModuleName": "Support Vector Machines",
+                    "Topics": [
+                        "Linear SVM Classification",
+                        "Nonlinear SVM Classification",
+                        "SVM Regression",
+                        "Decision Function and Predictions",
+                        "Kernelized SVM",
+                        "Case Study: MNIST Digit Classification",
+                        "Assignment: Personal Loan Risk Modeling"
+                    ]
+                },
+                {
+                    "RecID": 8,
+                    "ModuleName": "Decision Trees and Ensemble Techniques",
+                    "Topics": [
+                        "Training and Visualizing a Decision Tree",
+                        "Estimating Class Probabilities",
+                        "The CART Training Algorithm",
+                        "Computational Complexity",
+                        "Gini Impurity or Entropy?",
+                        "Regularization Hyperparameters",
+                        "DT Regression ",
+                        "Instability",
+                        "Voting Classifiers ",
+                        "Bagging and Pasting in Scikit-Learn",
+                        "Out-of-Bag Evaluation",
+                        "Random Forests",
+                        "Extra-Tree Classifiers",
+                        "Feature Importance",
+                        "Boosting",
+                        "AdaBoost",
+                        "Gradient Boosting",
+                        "XGBoost",
+                        "Stacking",
+                        "Evaluating Ensemble Learners",
+                        "Case Study: The Titanic Dataset",
+                        "Assignment: MNIST Dataset: Training Ensemble Learners"
+                    ]
+                },
+                {
+                    "RecID": 9,
+                    "ModuleName": "Featurization, Model Selection and Tuning",
+                    "Topics": [
+                        "Feature engineering",
+                        "Model selection and hyperparameter tuning",
+                        "Model performance measures",
+                        "ML pipelines",
+                        "Bootstrap sampling",
+                        "Grid search CV",
+                        "Randomized search CV",
+                        "K fold cross-validation",
+                        "Case study: The Titanic Revisited",
+                        "Assignment: Predicting concrete strength"
+                    ]
+                },
+                {
+                    "RecID": 10,
+                    "ModuleName": "Unsupervised Learning: Dimentionality Reduction",
+                    "Topics": [
+                        "The Curse of Dimensionality",
+                        "Principal Component Analysis",
+                        "Preserving the Variance",
+                        "Projecting Down to d Dimensions",
+                        "Explained Variance Ratio",
+                        "Choosing the Right Number of Dimensions",
+                        "PCA for Compression",
+                        "Randomized PCA",
+                        "Incremental PCA",
+                        "Kernel PCA ",
+                        "Selecting a Kernel and Tuning Hyperparameters",
+                        "Other Dimentionality Reduction Techniques: LLE, MDS, tSNE",
+                        "Case Study: MNIST Dimentionality Reduction",
+                        "Assignment: Human Activity Recognition from Samsung Galaxy S3 mobile phones"
+                    ]
+                },
+                {
+                    "RecID": 11,
+                    "ModuleName": "Unsupervised Learning: Clustering",
+                    "Topics": [
+                        "K-Means Clustering",
+                        "Limits of K-Means ",
+                        "Using clustering for image segmentation",
+                        "Using Clustering for Preprocessing ",
+                        "DBSCAN ",
+                        "Other Clustering Algorithms",
+                        "Gaussian Mixtures ",
+                        "Anomaly Detection using Gaussian Mixtures ",
+                        "Selecting the Number of Clusters",
+                        "Bayesian Gaussian Mixture Models",
+                        "Other Anomaly Detection and Novelty Detection Algorithms",
+                        "Case Study: Customer Segmentation from online Retail Sales Data",
+                        "Assignment: Vehicle Silhoutte Classification"
+                    ]
+                },
+                {
+                    "RecID": 12,
+                    "ModuleName": "Recommendation Engines",
+                    "Topics": [
+                        "Introduction to Recommendation systems",
+                        "Content based recommendation system",
+                        "Popularity based model",
+                        "Collaborative filtering (User similarity & Item similarity)",
+                        "Hybrid models",
+                        "Case Study: Netflix Movie Recommendations",
+                        "Assignment: Goodreads Book Recommendations"
+                    ]
+                },
+                {
+                    "RecID": 13,
+                    "ModuleName": "Neural Networks",
+                    "Topics": [
+                        "Mathematics for Deep Learning (Linear Algebra)",
+                        "Functions and Convex optimization",
+                        "Loss Function",
+                        "Introduction to Neural Networks and Deep Learning",
+                        "Gradient Descent",
+                        "Introduction to Perceptron & Neural Networks",
+                        "Batch Normalization",
+                        "Activation and Loss functions",
+                        "Hyper parameter tuning",
+                        "Deep Neural Networks",
+                        "Tensor Flow & Keras for Neural Networks & Deep Learning",
+                        "Visualizing Neural Networks with Tensorboard",
+                        "Case Study: Fashion MNIST",
+                        "Assignment: MNIST Digits Classification"
+                    ]
+                },
+                {
+                    "RecID": 14,
+                    "ModuleName": "Advanced Computer Vision",
+                    "Topics": [
+                        "Introduction to Image data",
+                        "Introduction to Convolutional Neural Networks",
+                        "Popular CNN architectures",
+                        "Transfer Learning",
+                        "Object detection",
+                        "Semantic segmentation",
+                        "Instance Segmentation",
+                        "Other variants of convolution",
+                        "Metric Learning",
+                        "Siamese Networks",
+                        "Triplet Loss",
+                        "Case Study: Object Detection",
+                        "Assignment: Face Recognition"
+                    ]
+                },
+                {
+                    "RecID": 15,
+                    "ModuleName": "Natural Language Processing",
+                    "Topics": [
+                        "Introduction to NLP",
+                        "Preprocessing text data",
+                        "Bag of Words Model",
+                        "TF-IDF",
+                        "N-grams",
+                        "Word2Vec",
+                        "GLOVE",
+                        "POS Tagging & Named Entity Recognition",
+                        "Introduction to Sequential models",
+                        "Need for memory in neural networks",
+                        "Types of sequential models – One to many, many to one, many to many",
+                        "Recurrent Neural networks (RNNs)",
+                        "Long Short Term Memory (LSTM)",
+                        "GRU",
+                        "Applications of LSTMs",
+                        "Sentiment analysis using LSTM",
+                        "Time series analysis",
+                        "Neural Machine Translation",
+                        "Advanced Language Models",
+                        "Case Study: Sentiment Analysis using LSTM",
+                        "Assignment: NLP with Disaster Tweets"
+                    ]
+                },
+                {
+                    "RecID": 16,
+                    "ModuleName": "GANs",
+                    "Topics": [
+                        "Introduction to GANs",
+                        "Autoencoders",
+                        "Deep Convolutional GANs",
+                        "How to train and common challenges in GANs",
+                        "Semi-supervised GANs",
+                        "Practical Application of GANs"
+                    ]
+                }
+            ]
+        },
+        {
+            "CourseID": 2,
+            "ImageUrl": "assets/images/CourseDS.jpg",
+            "Name": "PGP - Data Science",
+            "Duration": "12 Months",
+            "ModeOfDelivery": "Fully Online",
+            "BatchSchedule": "Weekends",
+            "Starts": "1st December",
+            "ToolsAndLanguage": "assets/images/ToolsAndLanguages/ds.jpg",
+            "TagLine": "Master Big Data and analytics with this cutting edge curriculum on Data Science.",
+            "Description": "Data science is an inter-disciplinary field of study that combines domain expertise, programming skills and uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data. In this comprehensive course, you will gain a foundational understanding and job-ready skillset in one of the most in-demand areas of expertise in todays data driven world.",
+            "EligibilityCriteria": "None. If you are passionate about learning Artificial Intelligence and Machine Learning and you want to get into the field of AI, you can enroll in this program.",
+            "Keywords": [
+                "AI",
+                "Machine Learning",
+                "Deep Learning",
+                "Python",
+                "Data Science"
+            ],
+            "CourseIncluds": [
+                "12-month Program",
+                "Personalized course curriculum",
+                "Live and engaging online mentoring sessions",
+                "Individual doubt-resolution with expert mentors, quiz and more",
+                "150+ hours of online learning content",
+                "12+ hands on practical case studies guided by industry experts",
+                "5 Industry projects including a capstone project",
+                "Professional Certificate on completion",
+                "1:1 career guidance, resume writing and interview preparation"
+            ],
+            "WhatToLearn": [
+                "The Data Science Toolkit",
+                "Foundations of Data Science.",
+                "What is Machine Learning?",
+                "The main steps in a typical Machine Learning project.",
+                "Handling, cleaning, and preparing data.",
+                "Selecting and engineering features.",
+                "Selecting a model and tuning hyperparameters using cross-validation.",
+                "The main challenges of Machine Learning, in particular underfitting and overfitting (the bias/variance tradeoff).",
+                "The most common learning algorithms: Linear and Polynomial Regression, Logistic Regression, k-Nearest Neighbors, Support Vector Machines, Decision Trees, Random Forests, and Ensemble methods.",
+                "Reducing the dimensionality of the training data to fight the curse of dimensionality.",
+                "Other unsupervised learning techniques, including clustering, density estimation and anomaly detection.",
+                "Time series forecasting.",
+                "Neural Network: Fundamentals.",
+                "Building and training neural nets using TensorFlow and Keras.",
+                "The most important neural net architectures: feedforward neural nets, recurrent nets, long short-term memory (LSTM) nets and autoencoders.",
+                "Techniques for training deep neural nets.",
+                "Scaling neural networks for large datasets.",
+                "Learning strategies with Reinforcement Learning.",
+                "Natural Language Processing"
+            ],
+            "Modules": [
+                {
+                    "RecID": 1,
+                    "ModuleName": "Python Programming Fundamentals",
+                    "Topics": [
+                        "Anaconda and Jupyter notebook – Installation & function",
+                        "Google Colab and Git basics",
+                        "Python fundamentals I: Data structures, functions, files, packages and routines",
+                        "Python fundamentals II: OOP with Python",
+                        "Numpy I: Arrays and Vectorized computation",
+                        "Numpy II: Array manipulation, Broadcasting and Sorting",
+                        "Pandas I: Introduction to pandas data structures: Series and Dataframes",
+                        "Pandas II: Data Preparation, Join, Combine, Reshape",
+                        "Pandas III: Data Aggregation and Group Operations"
+                    ]
+                },
+                {
+                    "RecID": 2,
+                    "ModuleName": "Statistical Methods I",
+                    "Topics": [
+                        "Descriptive Statistics",
+                        "Inferential Statistics",
+                        "Probability & Conditional Probability",
+                        "Probability Distributions - Types of distribution – Binomial, Poisson & Normal distribution",
+                        "Central Limit Theorem",
+                        "Hypothesis Testing"
+                    ]
+                },
+                {
+                    "RecID": 3,
+                    "ModuleName": "Statistical Methods II",
+                    "Topics": [
+                        "Analysis of Variance",
+                        "Chi-Squared test",
+                        "Statistical Modeling ",
+                        "Ordinary Least Square Estimations"
+                    ]
+                },
+                {
+                    "RecID": 4,
+                    "ModuleName": "EDA and Data Visualization",
+                    "Topics": [
+                        "Introduction to EDA",
+                        "Data Visualization with Matploptlib and Seaborn",
+                        "Data Cleaning and Preparation",
+                        "Feature Scaling and Standardization",
+                        "Univariate Analysis",
+                        "Multivariate Analysis and Correlation study",
+                        "Case Study: EDA: COVID Spread",
+                        "Assignment: US Car Price Visualization"
+                    ]
+                },
+                {
+                    "RecID": 5,
+                    "ModuleName": "Supervised Learning: Linear Regression",
+                    "Topics": [
+                        "What is Machine Learning?",
+                        "Difference between the Statistical and ML Approaches",
+                        "Getting Started with Regression: Linear Regression",
+                        "Gradient Descent",
+                        "Multiple Linear Regression",
+                        "Polynomial Regression",
+                        "Learning Curves",
+                        "Ridge Regression",
+                        "Lasso Regression",
+                        "Elastic Net",
+                        "Early Stopping",
+                        "Comparison of Regressors: RMSE",
+                        "R^2 and Residual Plots",
+                        "Errors and cost functions: Loss, cost and score",
+                        "Overfitting and Underfitting",
+                        "Bias and Variance",
+                        "Re-sampling and Cross Validation",
+                        "Case Study: Real Estate Price Prediction",
+                        "Assignment: Boston House Price Prediction"
+                    ]
+                },
+                {
+                    "RecID": 6,
+                    "ModuleName": "Logistic Regression",
+                    "Topics": [
+                        "Getting Started with Classification: Logistic Regression",
+                        "Estimating Probabilities",
+                        "Training and cost function",
+                        "Decision Boundaries",
+                        "Softmax Regression",
+                        "Evaluating Classifiers: Metrics",
+                        "ROC Curves",
+                        "AUC: Area under the Curve",
+                        "Precision -  Recall Curve",
+                        "Case Study: Iris Dataset",
+                        "Assignment: Wine Quality prediction"
+                    ]
+                },
+                {
+                    "RecID": 7,
+                    "ModuleName": "More Classifiers: kNN and Naïve Bayes",
+                    "Topics": [
+                        "k Nearest Neighbors Algorithm",
+                        "Probability and Naïve Bayes",
+                        "Evaluating Multiple Classifiers",
+                        "Case Study: 20 Newsgroup text classification",
+                        "Assignment: Predicting Parkinson's Disease"
+                    ]
+                },
+                {
+                    "RecID": 8,
+                    "ModuleName": "Support Vector Machines",
+                    "Topics": [
+                        "Linear SVM Classification",
+                        "Nonlinear SVM Classification",
+                        "SVM Regression",
+                        "Decision Function and Predictions",
+                        "Kernelized SVM",
+                        "Case Study: MNIST Digit Classification",
+                        "Assignment: Personal Loan Risk Modeling"
+                    ]
+                },
+                {
+                    "RecID": 9,
+                    "ModuleName": "Decision Trees and Ensemble Techniques",
+                    "Topics": [
+                        "Training and Visualizing a Decision Tree",
+                        "Estimating Class Probabilities",
+                        "The CART Training Algorithm",
+                        "Computational Complexity",
+                        "Gini Impurity or Entropy?",
+                        "Regularization Hyperparameters",
+                        "DT Regression ",
+                        "Instability",
+                        "Voting Classifiers ",
+                        "Bagging and Pasting in Scikit-Learn",
+                        "Out-of-Bag Evaluation",
+                        "Random Forests",
+                        "Extra-Tree Classifiers",
+                        "Feature Importance",
+                        "Boosting",
+                        "AdaBoost",
+                        "Gradient Boosting",
+                        "XGBoost",
+                        "Stacking",
+                        "Evaluating Ensemble Learners",
+                        "Case Study: The Titanic Dataset",
+                        "Assignment: MNIST Dataset: Training Ensemble Learners"
+                    ]
+                },
+                {
+                    "RecID": 10,
+                    "ModuleName": "Featurization, Model Selection and Tuning",
+                    "Topics": [
+                        "Feature engineering",
+                        "Model selection and hyperparameter tuning",
+                        "Model performance measures",
+                        "ML pipelines",
+                        "Bootstrap sampling",
+                        "Grid search CV",
+                        "Randomized search CV",
+                        "K fold cross-validation",
+                        "Case study: The Titanic Revisited",
+                        "Assignment: Predicting concrete strength"
+                    ]
+                },
+                {
+                    "RecID": 11,
+                    "ModuleName": "Unsupervised Learning: Dimentionality Reduction",
+                    "Topics": [
+                        "The Curse of Dimensionality",
+                        "Principal Component Analysis",
+                        "Preserving the Variance",
+                        "Projecting Down to d Dimensions",
+                        "Explained Variance Ratio",
+                        "Choosing the Right Number of Dimensions",
+                        "PCA for Compression",
+                        "Randomized PCA",
+                        "Incremental PCA",
+                        "Kernel PCA ",
+                        "Selecting a Kernel and Tuning Hyperparameters",
+                        "Other Dimentionality Reduction Techniques: LLE, MDS, tSNE",
+                        "Case Study: MNIST Dimentionality Reduction",
+                        "Assignment: Human Activity Recognition from Samsung Galaxy S3 mobile phones"
+                    ]
+                },
+                {
+                    "RecID": 12,
+                    "ModuleName": "Unsupervised Learning: Clustering",
+                    "Topics": [
+                        "K-Means Clustering",
+                        "Limits of K-Means ",
+                        "Using clustering for image segmentation",
+                        "Using Clustering for Preprocessing ",
+                        "DBSCAN ",
+                        "Other Clustering Algorithms",
+                        "Gaussian Mixtures ",
+                        "Anomaly Detection using Gaussian Mixtures ",
+                        "Selecting the Number of Clusters",
+                        "Bayesian Gaussian Mixture Models",
+                        "Other Anomaly Detection and Novelty Detection Algorithms",
+                        "Case Study: Customer Segmentation from online Retail Sales Data",
+                        "Assignment: Vehicle Silhoutte Classification"
+                    ]
+                },
+                {
+                    "RecID": 13,
+                    "ModuleName": "Recommendation Engines",
+                    "Topics": [
+                        "Introduction to Recommendation systems",
+                        "Content based recommendation system",
+                        "Popularity based model",
+                        "Collaborative filtering (User similarity & Item similarity)",
+                        "Hybrid models",
+                        "Case Study: Netflix Movie Recommendations",
+                        "Assignment: Goodreads Book Recommendations"
+                    ]
+                },
+                {
+                    "RecID": 14,
+                    "ModuleName": "Time series forecasting",
+                    "Topics": [
+                        "Introduction to forecasting data",
+                        "Definition and properties of Time Series data",
+                        "Examples of Time Series data",
+                        "Features of Time Series data",
+                        "Essentials for Forecasting",
+                        "Missing data and Exploratory analysis",
+                        "Components of Time Series data",
+                        "Naive, Average and Moving Average Forecasting",
+                        "Decomposition of Time Series into Trend, Seasonality and Residual",
+                        "Validation set and Performance Measures for a Time Series model",
+                        "Exponential Smoothing method",
+                        "ARIMA"
+                    ]
+                },
+                {
+                    "RecID": 15,
+                    "ModuleName": "Neural Networks",
+                    "Topics": [
+                        "Mathematics for Deep Learning (Linear Algebra)",
+                        "Functions and Convex optimization",
+                        "Loss Function",
+                        "Introduction to Neural Networks and Deep Learning",
+                        "Gradient Descent",
+                        "Introduction to Perceptron & Neural Networks",
+                        "Batch Normalization",
+                        "Activation and Loss functions",
+                        "Hyper parameter tuning",
+                        "Deep Neural Networks",
+                        "Tensor Flow & Keras for Neural Networks & Deep Learning",
+                        "Visualizing Neural Networks with Tensorboard",
+                        "Case Study: Fashion MNIST",
+                        "Assignment: MNIST Digits Classification"
+                    ]
+                },
+                {
+                    "RecID": 16,
+                    "ModuleName": "Natural Language Processing",
+                    "Topics": [
+                        "Introduction to NLP",
+                        "Preprocessing text data",
+                        "Bag of Words Model",
+                        "TF-IDF",
+                        "N-grams",
+                        "Word2Vec",
+                        "GLOVE",
+                        "POS Tagging & Named Entity Recognition",
+                        "Introduction to Sequential models",
+                        "Need for memory in neural networks",
+                        "Types of sequential models – One to many, many to one, many to many",
+                        "Recurrent Neural networks (RNNs)",
+                        "Long Short Term Memory (LSTM)",
+                        "GRU",
+                        "Applications of LSTMs",
+                        "Sentiment analysis using LSTM",
+                        "Time series analysis",
+                        "Neural Machine Translation",
+                        "Advanced Language Models",
+                        "Case Study: Sentiment Analysis using LSTM",
+                        "Assignment: NLP with Disaster Tweets"
+                    ]
+                }
+            ]
+        },
+        {
+            "CourseID": 3,
+            "ImageUrl": "assets/images/CourseDL.jpeg",
+            "Name": "PGP - Advanced Deep Learning ",
+            "Duration": "6 Months",
+            "ModeOfDelivery": "Fully Online",
+            "BatchSchedule": "Weekends",
+            "Starts": "1st December",
+            "ToolsAndLanguage": "assets/images/ToolsAndLanguages/aiml.jpg",
+            "TagLine": "Take a deep dive into Deep Learning, and master one of the most sought after skills today.",
+            "Description": "Get ready for tomorrow with a comprehensive course in Deep Learning. An in-depth, all inclusive curriculum designed by top industry experts, personaized course content, hands on case studies and projects - all delivered through live, engaging mentoring sessions will help you transform your career and start your career journey in AI.",
+            "EligibilityCriteria": "None. If you are passionate about learning Artificial Intelligence and Machine Learning and you want to get into the field of AI, you can enroll in this program.",
+            "Keywords": [
+                "AI",
+                "Machine Learning",
+                "Deep Learning",
+                "Python"
+            ],
+            "CourseIncluds": [
+                "6-month Program",
+                "Personalized course curriculum",
+                "Live and engaging online mentoring sessions",
+                "Individual doubt-resolution with expert mentors, quiz and more",
+                "50+ hours of online learning content",
+                "5 hands on practical case studies guided by industry experts",
+                "3 Industry projects including a capstone project",
+                "Professional Certificate on completion",
+                "1:1 career guidance, resume writing and interview prepapration"
+            ],
+            "WhatToLearn": [
+                "Mathematics and Statistics for Deep Learning",
+                "Machine Learning foundations.",
+                "An introduction to neural networks",
+                "Building and training neural nets using TensorFlow and Keras.",
+                "The most important neural net architectures: feedforward neural nets, convolutional nets, recurrent nets, long short-term memory (LSTM) nets, autoencoders and generative adversarial networks (GANs).",
+                "Techniques for training deep neural nets.",
+                "Scaling neural networks for large datasets.",
+                "Computer Vision.",
+                "Natural Language Processing.",
+                "Learning strategies with Reinforcement Learning.",
+                "Handling uncertainty with Bayesian Deep Learning."
+            ],
+            "Modules": [
+                {
+                    "RecID": 1,
+                    "ModuleName": "Python Programming Fundamentals",
+                    "Topics": [
+                        "Anaconda and Jupyter notebook – Installation & function",
+                        "Google Colab and Git basics",
+                        "Python fundamentals I: Data structures, functions, files, packages and routines",
+                        "Python fundamentals II: OOP with Python",
+                        "Numpy I: Arrays and Vectorized computation",
+                        "Numpy II: Array manipulation, Broadcasting and Sorting",
+                        "Pandas I: Introduction to pandas data structures: Series and Dataframes",
+                        "Pandas II: Data Preparation, Join, Combine, Reshape",
+                        "Pandas III: Data Aggregation and Group Operations"
+                    ]
+                },
+                {
+                    "RecID": 2,
+                    "ModuleName": "Statistical Methods for Artificial Intelligence",
+                    "Topics": [
+                        "Descriptive Statistics",
+                        "Inferential Statistics",
+                        "Probability & Conditional Probability",
+                        "Probability Distributions - Types of distribution – Binomial, Poisson & Normal distribution",
+                        "Central Limit Theorem"
+                    ]
+                },
+                {
+                    "RecID": 3,
+                    "ModuleName": "Foundations of Machine Learning",
+                    "Topics": [
+                        "The four branches of Machine Learning",
+                        "Data Preprocessing",
+                        "Evaluating ML models",
+                        "Overfitting and underfitting",
+                        "The Bias - Variance Tradeoff",
+                        "Introduction to EDA",
+                        "Data Visualization with Matploptlib and Seaborn",
+                        "Data Cleaning and Preparation",
+                        "Data Cleaning and Preparation",
+                        "Univariate Analysis",
+                        "Multivariate Analysis and Correlation study",
+                        "Case Study: EDA: COVID Spread",
+                        "Assignment: US Car Price Visualization"
+                    ]
+                },
+                {
+                    "RecID": 4,
+                    "ModuleName": "Introduction to neural networks",
+                    "Topics": [
+                        "Mathematics for Deep Learning (Linear Algebra)",
+                        "Functions and Convex optimization",
+                        "Loss Function",
+                        "Introduction to Neural Networks and Deep Learning",
+                        "Gradient Descent",
+                        "Introduction to Perceptron & Neural Networks",
+                        "Batch Normalization",
+                        "Activation and Loss functions",
+                        "Hyper parameter tuning",
+                        "Deep Neural Networks",
+                        "Tensor Flow & Keras for Neural Networks & Deep Learning",
+                        "Visualizing Neural Networks with Tensorboard",
+                        "Case Study: Fashion MNIST",
+                        "Assignment: MNIST Digits Classification"
+                    ]
+                },
+                {
+                    "RecID": 5,
+                    "ModuleName": "Advanced Computer Vision",
+                    "Topics": [
+                        "Introduction to Image data",
+                        "Introduction to Convolutional Neural Networks",
+                        "CNN - Step by Step",
+                        "Popular CNN architectures",
+                        "Transfer Learning",
+                        "Object detection",
+                        "Semantic segmentation",
+                        "Instance Segmentation",
+                        "Other variants of convolution",
+                        "Metric Learning",
+                        "Siamese Networks",
+                        "Triplet Loss",
+                        "Case Study: Object Detection",
+                        "Assignment: Face Recognition"
+                    ]
+                },
+                {
+                    "RecID": 6,
+                    "ModuleName": "Natural Language Processing",
+                    "Topics": [
+                        "Introduction to NLP",
+                        "Preprocessing text data",
+                        "Bag of Words Model",
+                        "TF-IDF",
+                        "N-grams",
+                        "Word2Vec",
+                        "GLOVE",
+                        "POS Tagging & Named Entity Recognition",
+                        "Introduction to Sequential models",
+                        "Need for memory in neural networks",
+                        "Types of sequential models – One to many, many to one, many to many",
+                        "Recurrent Neural networks (RNNs)",
+                        "Long Short Term Memory (LSTM)",
+                        "GRU",
+                        "Applications of LSTMs",
+                        "Sentiment analysis using LSTM",
+                        "Time series analysis",
+                        "Neural Machine Translation",
+                        "Advanced Language Models",
+                        "Case Study: Sentiment Analysis using LSTM",
+                        "Assignment: NLP with Disaster Tweets"
+                    ]
+                },
+                {
+                    "RecID": 7,
+                    "ModuleName": "GANs",
+                    "Topics": [
+                        "Introduction to GANs",
+                        "Autoencoders",
+                        "Deep Convolutional GANs",
+                        "How to train and common challenges in GANs",
+                        "Semi-supervised GANs",
+                        "Practical Application of GANs"
+                    ]
+                }
+            ]
+        },
+        {
+            "CourseID": 4,
+            "ImageUrl": "",
+            "Name": "Build an AI Chatbot with IBM Watson",
+            "Duration": "4 Months",
+            "ModeOfDelivery": "Fully Online",
+            "BatchSchedule": "Weekends",
+            "Starts": "1st December",
+            "ToolsAndLanguage": "assets/images/ToolsAndLanguages/aiml.jpg",
+            "TagLine": "Build an AI powered chatbot that delights your users!",
+            "Description": "In todays business landscape, chatbots have exploded in popularity due to the myriad benefits they bring. Due to the advancements in cloud computing, AI platforms and services are also at your fingertip. The goal of this course is to teach you how to build your own personal customer assistant chatbot that can interact with users intelligently, and automatically search a knowledgebase to answer queries, all with very little programming!",
+            "EligibilityCriteria": "None. If you are passionate about learning Artificial Intelligence and Machine Learning and you want to get into the field of AI, you can enroll in this program.",
+            "Keywords": [
+                "AI",
+                "Machine Learning",
+                "Deep Learning",
+                "Chatbot",
+                "IBM",
+                "Watson"
+            ],
+            "CourseIncluds": [
+                "4-month Program",
+                "Personalized course curriculum",
+                "Live and engaging online mentoring sessions",
+                "Individual doubt-resolution with expert mentors, quiz, assignments and more",
+                "30+ hours of online learning content",
+                "2 hands on case studies",
+                "A capstone project to build your own chatbot",
+                "Professional Certificate on completion"
+            ],
+            "WhatToLearn": [
+                "What are Chatbots?",
+                "Advantages of an AI powered chatbot.",
+                "Your first chatbot.",
+                "Intents and Entities: the building blocks of the chatbot.",
+                "Dialogflow: teaching it to talk.",
+                "Watson Discovery: Smart search.",
+                "Putting it all together.",
+                "Building your own chatbot!."
+            ],
+            "Modules": [
+                {
+                    "RecID": 1,
+                    "ModuleName": "Introduction to Chatbots",
+                    "Topics": [
+                        "What are chatbots?",
+                        "Chatbots are trending",
+                        "Leader in the Industry",
+                        "Lab 1: Create an instance of Watson Assistant"
+                    ]
+                },
+                {
+                    "RecID": 2,
+                    "ModuleName": "Working with Intents",
+                    "Topics": [
+                        "How chatbots work",
+                        "Understanding Intents",
+                        "Lab 2: Create Dialog Skill and Intents",
+                        "Lab 3: Import Intents"
+                    ]
+                },
+                {
+                    "RecID": 3,
+                    "ModuleName": "Working with Entities",
+                    "Topics": [
+                        "Understanding Entities",
+                        "Lab 4: Create Entities",
+                        "Lab 5: Import and Export Entities"
+                    ]
+                },
+                {
+                    "RecID": 4,
+                    "ModuleName": "Defining the Dialog",
+                    "Topics": [
+                        "Putting it all together",
+                        "Building user-friendly chatbots",
+                        "Lab 6: Implement the Dialog",
+                        "Lab 7: Define Domain-Specific Intents"
+                    ]
+                },
+                {
+                    "RecID": 5,
+                    "ModuleName": "Deploying your Chatbot",
+                    "Topics": [
+                        "Deploying to a WordPress site",
+                        "Lab 8: Add a preview and retrieve your credentials",
+                        "Lab 9: Deploy your Chatbot"
+                    ]
+                },
+                {
+                    "RecID": 6,
+                    "ModuleName": "Advanced concepts – Part 1",
+                    "Topics": [
+                        "Working with Context Variables and Slots",
+                        "Lab 10: Explore Context Variables",
+                        "Lab 11: Master Slots"
+                    ]
+                },
+                {
+                    "RecID": 7,
+                    "ModuleName": "Advanced concepts – Part 2",
+                    "Topics": [
+                        "Understanding Digressions",
+                        "Summary",
+                        "Conclusion",
+                        "Lab 12: Enable Digressions"
+                    ]
+                }
+            ]
+        },
+        {
+            "CourseID": 5,
+            "ImageUrl": "assets/images/CourseAnalysis.jpg",
+            "Name": "Predictive Analytics with Python",
+            "Duration": "4 Months",
+            "ModeOfDelivery": "Fully Online",
+            "BatchSchedule": "Weekends",
+            "Starts": "1st December",
+            "ToolsAndLanguage": "assets/images/ToolsAndLanguages/aiml.jpg",
+            "TagLine": "Build a predictive model from the ground up, using Python.",
+            "Description": "In this course, you will learn how to build linear and logistic regression model with meaningful variables using statistical and machine learning techniques. You will also learn how to use this model to make predictions and how to present it and its performance to business stakeholders.",
+            "EligibilityCriteria": "None. If you are passionate about learning Artificial Intelligence and Machine Learning and you want to get into the field of AI, you can enroll in this program.",
+            "Keywords": [
+                "AI",
+                "Machine Learning",
+                "Python",
+                "Data Science"
+            ],
+            "CourseIncluds": [
+                "4-month Program",
+                "Personalized course curriculum",
+                "Live and engaging online mentoring sessions",
+                "Individual doubt-resolution with expert mentors, quiz, assignments and more",
+                "30+ hours of online learning content",
+                "4 hands on practical case studies guided by industry experts",
+                "2 Industry projects including a capstone project",
+                "Professional Certificate on completion"
+            ],
+            "WhatToLearn": [
+                "Foundations of Predictive Modeling",
+                "What is Machine Learning? ",
+                "The main steps in a typical Machine Learning project.",
+                "Handling, cleaning, and preparing data.",
+                "Selecting and engineering features.",
+                "Selecting a model and tuning hyperparameters using cross-validation.",
+                "The main challenges of Machine Learning, in particular underfitting and overfitting (the bias/variance tradeoff).",
+                "The most common learning algorithms: Linear and Polynomial Regression, Logistic Regression."
+            ],
+            "Modules": [
+                {
+                    "RecID": 1,
+                    "ModuleName": "Python Programming Fundamentals",
+                    "Topics": [
+                        "Anaconda and Jupyter notebook – Installation & function",
+                        "Google Colab and Git basics",
+                        "Python fundamentals I: Data structures, functions, files, packages and routines",
+                        "Python fundamentals II: OOP with Python",
+                        "Numpy I: Arrays and Vectorized computation",
+                        "Numpy II: Array manipulation, Broadcasting and Sorting",
+                        "Pandas I: Introduction to pandas data structures: Series and Dataframes",
+                        "Pandas II: Data Preparation, Join, Combine, Reshape",
+                        "Pandas III: Data Aggregation and Group Operations"
+                    ]
+                },
+                {
+                    "RecID": 2,
+                    "ModuleName": "Statistical Methods I",
+                    "Topics": [
+                        "Descriptive Statistics",
+                        "Inferential Statistics",
+                        "Probability & Conditional Probability",
+                        "Probability Distributions - Types of distribution – Binomial, Poisson & Normal distribution",
+                        "Central Limit Theorem",
+                        "Hypothesis Testing"
+                    ]
+                },
+                {
+                    "RecID": 3,
+                    "ModuleName": "Statistical Methods II",
+                    "Topics": [
+                        "Analysis of Variance",
+                        "Chi-Squared test",
+                        "Statistical Modeling ",
+                        "Ordinary Least Square Estimations"
+                    ]
+                },
+                {
+                    "RecID": 4,
+                    "ModuleName": "EDA and Data Visualization",
+                    "Topics": [
+                        "Introduction to EDA",
+                        "Data Visualization with Matploptlib and Seaborn",
+                        "Data Cleaning and Preparation",
+                        "Feature Scaling and Standardization",
+                        "Univariate Analysis",
+                        "Multivariate Analysis and Correlation study",
+                        "Case Study: EDA: COVID Spread",
+                        "Assignment: US Car Price Visualization"
+                    ]
+                },
+                {
+                    "RecID": 5,
+                    "ModuleName": "Supervised Learning: Linear Regression",
+                    "Topics": [
+                        "What is Machine Learning?",
+                        "Difference between the Statistical and ML Approaches",
+                        "Getting Started with Regression: Linear Regression",
+                        "Gradient Descent",
+                        "Multiple Linear Regression",
+                        "Polynomial Regression",
+                        "Learning Curves",
+                        "Ridge Regression",
+                        "Lasso Regression",
+                        "Elastic Net",
+                        "Early Stopping",
+                        "Comparison of Regressors: RMSE",
+                        "R^2 and Residual Plots",
+                        "Errors and cost functions: Loss, cost and score",
+                        "Overfitting and Underfitting",
+                        "Bias and Variance",
+                        "Re-sampling and Cross Validation",
+                        "Case Study: Real Estate Price Prediction",
+                        "Assignment: Boston House Price Prediction"
+                    ]
+                },
+                {
+                    "RecID": 6,
+                    "ModuleName": "Logistic Regression",
+                    "Topics": [
+                        "Getting Started with Classification: Logistic Regression",
+                        "Estimating Probabilities",
+                        "Training and cost function",
+                        "Decision Boundaries",
+                        "Softmax Regression",
+                        "Evaluating Classifiers: Metrics",
+                        "ROC Curves",
+                        "AUC: Area under the Curve",
+                        "Precision -  Recall Curve",
+                        "Case Study: Iris Dataset",
+                        "Assignment: Wine Quality prediction"
+                    ]
+                }
+            ]
+        }
+    ]
+}
